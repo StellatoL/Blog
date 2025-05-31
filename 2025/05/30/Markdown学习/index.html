@@ -663,7 +663,7 @@
 <h3 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h3><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure>
 
-<p>渲染效果如下：<br><br><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn(opens new window)</a><br><a href="mailto:&#x66;&#x61;&#107;&#101;&#64;&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">fake@example.com</a><br></p>
+<p>渲染效果如下：<br><br><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn(opens new window)</a><br><a href="mailto:&#102;&#x61;&#107;&#101;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#x6f;&#109;">fake@example.com</a><br></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接<br></h3><p><a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/fenced-code-blocks.html#emphasis">强调</a> 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure>
 
@@ -994,6 +994,18 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
 
@@ -1205,13 +1217,22 @@ var options = {
   backgroundColor: 'transparent',
   buttonColorDark: '#100f2c',
   buttonColorLight: '#fff',
-  saveInCookies: true,
+  saveInCookies: false,
   label: '🌓',
-  autoMatchOsTheme: true
+  autoMatchOsTheme: false
 }
 const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
+if (window.darkmode && !window.darkmode.isActivated()) {
+  window.darkmode.toggle();
+  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
+  if (toggleButtons && toggleButtons.length > 0) {
+    for (i = 0; i < toggleButtons.length; i++) {
+      toggleButtons[i].classList.add("darkmode-toggle--white");
+    }
+  }
+}
 </script>
 
     </div>
