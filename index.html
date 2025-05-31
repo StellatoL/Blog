@@ -189,7 +189,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-05-31 12:47:02 / 修改时间：12:44:13" itemprop="dateCreated datePublished" datetime="2025-05-31T12:47:02+08:00">2025-05-31</time>
+              <time title="创建时间：2025-05-31 12:47:02 / 修改时间：13:22:45" itemprop="dateCreated datePublished" datetime="2025-05-31T12:47:02+08:00">2025-05-31</time>
             </span>
 
           
@@ -204,7 +204,7 @@
 
       
           <hr>
-<h2 id="title-泛型指针与通用性date-2025-01-01-18-00-00tags-指针-Ccategories-RM-PRIME-RM算法-学习记录-C"><a href="#title-泛型指针与通用性date-2025-01-01-18-00-00tags-指针-Ccategories-RM-PRIME-RM算法-学习记录-C" class="headerlink" title="title: 泛型指针与通用性date: 2025-01-01 18:00:00tags:  - 指针  - Ccategories:  - RM_PRIME  - RM算法  - 学习记录  - C  "></a>title: 泛型指针与通用性<br>date: 2025-01-01 18:00:00<br>tags:<br>  - 指针<br>  - C<br>categories:<br>  - RM_PRIME<br>  - RM算法<br>  - 学习记录<br>  - C  </h2><h1 id="1-泛型指针的定义"><a href="#1-泛型指针的定义" class="headerlink" title="1.泛型指针的定义"></a>1.泛型指针的定义</h1><h2 id="类型声明："><a href="#类型声明：" class="headerlink" title="类型声明："></a>类型声明：</h2><h3 id="void-是一个无类型指针，可以指向任意类型的数据的地址"><a href="#void-是一个无类型指针，可以指向任意类型的数据的地址" class="headerlink" title="void * 是一个无类型指针，可以指向任意类型的数据的地址"></a>void * 是一个<em>无类型指针</em>，可以指向任意类型的数据的地址</h3><h3 id="eg"><a href="#eg" class="headerlink" title="eg."></a>eg.</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">char</span> c = <span class="string">&#x27;x&#x27;</span>;</span><br><span class="line"><span class="type">void</span> *p = &amp;a;  <span class="comment">// 正确：指向 int</span></span><br><span class="line">p = &amp;c;        <span class="comment">// 正确：指向 char</span></span><br></pre></td></tr></table></figure>
+<h2 id="title-泛型指针与通用性date-2025-01-01-18-00-00tags-指针-Ccategories-RM-PRIME-RM算法-学习记录-C"><a href="#title-泛型指针与通用性date-2025-01-01-18-00-00tags-指针-Ccategories-RM-PRIME-RM算法-学习记录-C" class="headerlink" title="title: 泛型指针与通用性date: 2025-01-01 18:00:00tags:  - 指针  - Ccategories:  - RM_PRIME  - RM算法  - 学习记录  - C"></a>title: 泛型指针与通用性<br>date: 2025-01-01 18:00:00<br>tags:<br>  - 指针<br>  - C<br>categories:<br>  - RM_PRIME<br>  - RM算法<br>  - 学习记录<br>  - C</h2><h1 id="1-泛型指针的定义"><a href="#1-泛型指针的定义" class="headerlink" title="1.泛型指针的定义"></a>1.泛型指针的定义</h1><h2 id="类型声明："><a href="#类型声明：" class="headerlink" title="类型声明："></a>类型声明：</h2><h3 id="void-是一个无类型指针，可以指向任意类型的数据的地址"><a href="#void-是一个无类型指针，可以指向任意类型的数据的地址" class="headerlink" title="void * 是一个无类型指针，可以指向任意类型的数据的地址"></a>void * 是一个<em>无类型指针</em>，可以指向任意类型的数据的地址</h3><h3 id="eg"><a href="#eg" class="headerlink" title="eg."></a>eg.</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">char</span> c = <span class="string">&#x27;x&#x27;</span>;</span><br><span class="line"><span class="type">void</span> *p = &amp;a;  <span class="comment">// 正确：指向 int</span></span><br><span class="line">p = &amp;c;        <span class="comment">// 正确：指向 char</span></span><br></pre></td></tr></table></figure>
 
 <hr>
 <h1 id="2-核心特点"><a href="#2-核心特点" class="headerlink" title="2.核心特点"></a>2.核心特点</h1><h2 id="1-通用型"><a href="#1-通用型" class="headerlink" title="(1)通用型"></a>(1)通用型</h2><h3 id="可以接受任何数据类型的地址"><a href="#可以接受任何数据类型的地址" class="headerlink" title="可以接受任何数据类型的地址"></a>可以接受任何数据类型的地址</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> *p;</span><br><span class="line"><span class="type">int</span> num = <span class="number">5</span>;</span><br><span class="line">p = &amp;num;     <span class="comment">// 指向 int</span></span><br><span class="line">p = <span class="string">&quot;hello&quot;</span>;   <span class="comment">// 指向字符串</span></span><br></pre></td></tr></table></figure>
@@ -666,7 +666,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/31/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/Markdown%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -680,7 +680,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/05/31/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2025/01/01/Markdown%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Markdown学习</a>
         </h2>
 
         <div class="post-meta">
@@ -689,9 +689,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-05-31 12:47:02 / 修改时间：12:43:47" itemprop="dateCreated datePublished" datetime="2025-05-31T12:47:02+08:00">2025-05-31</time>
+              <time title="创建时间：2025-01-01 18:00:00" itemprop="dateCreated datePublished" datetime="2025-01-01T18:00:00+08:00">2025-01-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-05-31 13:04:24" itemprop="dateModified" datetime="2025-05-31T13:04:24+08:00">2025-05-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E7%89%A9/" itemprop="url" rel="index"><span itemprop="name">杂物</span></a>
+                </span>
             </span>
 
           
@@ -705,15 +720,673 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr>
-<h2 id="title-基本设置date-2025-01-01-18-00-00tags-STM32-GPIOcategories-RM-PRIME-RM电控-学习记录-STM32"><a href="#title-基本设置date-2025-01-01-18-00-00tags-STM32-GPIOcategories-RM-PRIME-RM电控-学习记录-STM32" class="headerlink" title="title: 基本设置date: 2025-01-01 18:00:00tags:  - STM32  - GPIOcategories:  - RM_PRIME  - RM电控  - 学习记录  - STM32 "></a>title: 基本设置<br>date: 2025-01-01 18:00:00<br>tags:<br>  - STM32<br>  - GPIO<br>categories:<br>  - RM_PRIME<br>  - RM电控<br>  - 学习记录<br>  - STM32 </h2><h1 id="1-开启时钟以及初始化GPIO口"><a href="#1-开启时钟以及初始化GPIO口" class="headerlink" title="1.开启时钟以及初始化GPIO口"></a>1.开启时钟以及初始化GPIO口</h1><hr>
-<h2 id="开启时钟"><a href="#开启时钟" class="headerlink" title="开启时钟"></a>开启时钟</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOX,ENABLE);</span><br></pre></td></tr></table></figure>
-<p><strong>具体代码解释：</strong><br>	因为GPIO挂载在APB2总线上，所以此函数是用于开启GPIO_x上的时钟信号</p>
-<p><strong>参数：</strong><br>	1.<em>RCC_APB2Periph_GPIOx</em><br>		其中，x代表数字，这个参数用于控制开启时钟的GPIO端口号<br>	2.<em>ENABLE</em><br>		这个参数表示开启或关闭时钟，对应<em>ENABLE</em>和<em>DISABLE</em></p>
+          <h1 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h1><h2 id="1-Markdown标题语法"><a href="#1-Markdown标题语法" class="headerlink" title="1.Markdown标题语法"></a>1.Markdown标题语法</h2><p>要创建标题，请在单词或短语前面添加井号 (<code>#</code>) 。<code>#</code> 的数量代表了标题的级别。  </p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code># Heading level 1</code></td>
+<td><code>&lt;h1&gt;Heading level 1&lt;/h1&gt;</code></td>
+<td># Heading level 1</td>
+</tr>
+<tr>
+<td><code>## Heading level 2</code></td>
+<td><code>&lt;h2&gt;Heading level 2&lt;/h2&gt;</code></td>
+<td>## Heading level 2</td>
+</tr>
+<tr>
+<td><code>### Heading level 3</code></td>
+<td><code>&lt;h3&gt;Heading level 3&lt;/h3&gt;</code></td>
+<td>### Heading level 3</td>
+</tr>
+<tr>
+<td><code>#### Heading level 4</code></td>
+<td><code>&lt;h4&gt;Heading level 4&lt;/h4&gt;</code></td>
+<td>#### Heading level 4</td>
+</tr>
+<tr>
+<td><code>##### Heading level 5</code></td>
+<td><code>&lt;h5&gt;Heading level 5&lt;/h5&gt;</code></td>
+<td>##### Heading level 5</td>
+</tr>
+<tr>
+<td><code>###### Heading level 6</code></td>
+<td><code>&lt;h6&gt;Heading level 6&lt;/h6&gt;</code></td>
+<td>###### Heading level 6</td>
+</tr>
+</tbody></table>
+<h3 id="可选语法"><a href="#可选语法" class="headerlink" title="可选语法"></a>可选语法</h3><p>还可以在文本下方添加任意数量的 &#x3D;&#x3D; 号来标识一级标题，或者 – 号来标识二级标题。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Heading level 1   ===============</code></td>
+<td><code>&lt;h1&gt;Heading level 1&lt;/h1&gt;</code></td>
+<td># Heading level 1</td>
+</tr>
+<tr>
+<td><code>Heading level 2   ---------------</code></td>
+<td><code>&lt;h2&gt;Heading level 2&lt;/h2&gt;</code></td>
+<td>## Heading level 2</td>
+</tr>
+</tbody></table>
+<h3 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践<br></h3><p>不同的 Markdown 应用程序处理 <code>#</code> 和标题之间的空格方式并不一致。为了兼容考虑，请用一个空格在 <code>#</code> 和标题之间进行分隔。  </p>
+<h2 id="2-Markdown段落"><a href="#2-Markdown段落" class="headerlink" title="2.Markdown段落"></a>2.Markdown段落</h2><p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>I really like using Markdown.      I think I&#39;ll use it to format all of my documents from now on.</code></td>
+<td><code>&lt;p&gt;I really like using Markdown.&lt;/p&gt;      &lt;p&gt;I think I&#39;ll use it to format all of my documents from now on.&lt;/p&gt;</code></td>
+<td>I really like using Markdown.<br><br>I think I’ll use it to format all of</td>
+</tr>
+</tbody></table>
+<h3 id="段落（Paragraph）用法的最佳实践"><a href="#段落（Paragraph）用法的最佳实践" class="headerlink" title="段落（Paragraph）用法的最佳实践"></a>段落（Paragraph）用法的最佳实践<br></h3><p>不要用空格（spaces）或制表符（ tabs）缩进段落。</p>
+<h2 id="3-Markdown换行语法"><a href="#3-Markdown换行语法" class="headerlink" title="3.Markdown换行语法"></a>3.Markdown换行语法<br></h2><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/line-breaks.html#%E6%8D%A2%E8%A1%8C-line-break-%E7%94%A8%E6%B3%95%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">换行(<code>&lt;br&gt;</code>)</a>。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>This is the first line.     And this is the second line.</code></td>
+<td><code>&lt;p&gt;This is the first line.&lt;br&gt;   And this is the second line.&lt;/p&gt;</code></td>
+<td>This is the first line.  <br>And this is the second line.</td>
+</tr>
+</tbody></table>
+<h3 id="换行（Line-Break）用法的最佳实践"><a href="#换行（Line-Break）用法的最佳实践" class="headerlink" title="换行（Line Break）用法的最佳实践"></a>换行（Line Break）用法的最佳实践<br></h3><p>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 <code>结尾空格（trailing whitespace)</code> 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式：HTML 的 <code>&lt;br&gt;</code> 标签。<br><br>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。<br><br>还有两种其他方式我并不推荐使用。CommonMark 和其它几种轻量级标记语言支持在行尾添加反斜杠 (<code>\</code>) 的方式实现换行，但是并非所有 Markdown 应用程序都支持此种方式，因此从兼容性的角度来看，不推荐使用。并且至少有两种轻量级标记语言支持无须在行尾添加任何内容，只须键入回车键（<code>return</code>）即可实现换行。<br></p>
+<h2 id="4-Markdown强调语法"><a href="#4-Markdown强调语法" class="headerlink" title="4.Markdown强调语法"></a>4.Markdown强调语法<br></h2><p>通过将文本设置为<strong>粗体</strong>或<em>斜体</em>来强调其重要性。</p>
+<h3 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h3><p>要加粗文本，请在单词或短语的前后各添加两个星号（asterisks）或下划线（underscores）。如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>I just love **bold text**.</code></td>
+<td><code>I just love &lt;strong&gt;bold text&lt;/strong&gt;.</code></td>
+<td>I just love <strong>bold text</strong>.</td>
+</tr>
+<tr>
+<td><code>I just love __bold text__.</code></td>
+<td><code>I just love &lt;strong&gt;bold text&lt;/strong&gt;.</code></td>
+<td>I just love <strong>bold text</strong>.</td>
+</tr>
+<tr>
+<td><code>Love**is**bold</code></td>
+<td><code>Love&lt;strong&gt;is&lt;/strong&gt;bold</code></td>
+<td>Love<strong>is</strong>bold</td>
+</tr>
+</tbody></table>
+<h4 id="粗体（Bold）用法最佳实践"><a href="#粗体（Bold）用法最佳实践" class="headerlink" title="粗体（Bold）用法最佳实践"></a>粗体（Bold）用法最佳实践</h4><p>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号(asterisks)。<br></p>
+<h3 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h3><p>要用斜体显示文本，请在单词或短语前后添加一个星号（asterisk）或下划线（underscore）。要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Italicized text is the *cat&#39;s meow*.</code></td>
+<td><code>Italicized text is the &lt;em&gt;cat&#39;s meow&lt;/em&gt;.</code></td>
+<td>Italicized text is the <em>cat’s meow</em>.</td>
+</tr>
+<tr>
+<td><code>Italicized text is the _cat&#39;s meow_.</code></td>
+<td><code>Italicized text is the &lt;em&gt;cat&#39;s meow&lt;/em&gt;.</code></td>
+<td>Italicized text is the <em>cat’s meow</em>.</td>
+</tr>
+<tr>
+<td><code>A*cat*meow</code></td>
+<td><code>A&lt;em&gt;cat&lt;/em&gt;meow</code></td>
+<td>A_cat_meow</td>
+</tr>
+</tbody></table>
+<h4 id="斜体（Italic）用法的最佳实践"><a href="#斜体（Italic）用法的最佳实践" class="headerlink" title="斜体（Italic）用法的最佳实践"></a>斜体（Italic）用法的最佳实践</h4><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br></p>
+<h3 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h3><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>This text is ***really important***.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <strong><em>really important</em></strong>.</td>
+</tr>
+<tr>
+<td><code>This text is ___really important___.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <strong><em>really important</em></strong>.</td>
+</tr>
+<tr>
+<td><code>This text is __*really important*__.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <strong><em>really important</em></strong>.</td>
+</tr>
+<tr>
+<td><code>This text is **_really important_**.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <strong><em>really important</em></strong>.</td>
+</tr>
+<tr>
+<td><code>This is really***very***important text.</code></td>
+<td><code>This is really&lt;strong&gt;&lt;em&gt;very&lt;/em&gt;&lt;/strong&gt;important text.</code></td>
+<td>This is really**<em>very</em>**important text.</td>
+</tr>
+</tbody></table>
+<h4 id="粗体（Bold）-和斜体（Italic）-用法的最佳实践"><a href="#粗体（Bold）-和斜体（Italic）-用法的最佳实践" class="headerlink" title="**粗体（Bold）*和斜体（Italic）*用法的最佳实践"></a>**粗体（Bold）*<em>和</em>斜体（Italic）*用法的最佳实践</h4><p>Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分<strong>加粗</strong>并以<em>斜体</em>显示，以示<em><strong>重要</strong></em>。<br></p>
+<h2 id="5-Markdown引用语法"><a href="#5-Markdown引用语法" class="headerlink" title="5.Markdown引用语法"></a>5.Markdown引用语法<br></h2><p>要创建块引用，请在段落前添加一个 <code>&gt;</code> 符号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br></pre></td></tr></table></figure>
+<p>可以将多个条目组织成有序或无序列表。</p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>1. First item   2. Second item   3. Third item   4. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>4. Fourth item</td>
+</tr>
+<tr>
+<td><code>1. First item   1. Second item   1. Third item   1. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>4. Fourth item</td>
+</tr>
+<tr>
+<td><code>1. First item   8. Second item   3. Third item   5. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>4. Fourth item</td>
+</tr>
+<tr>
+<td><code>1. First item   2. Second item   3. Third item       1. Indented item       2. Indented item   4. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item   &lt;ol&gt;   &lt;li&gt;Indented item&lt;/li&gt;   &lt;li&gt;Indented item&lt;/li&gt;   &lt;/ol&gt;   &lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>    1. Indented item<br>    2. Indented item<br>4. Fourth item</td>
+</tr>
+</tbody></table>
+<h4 id="有序列表最佳实践"><a href="#有序列表最佳实践" class="headerlink" title="有序列表最佳实践"></a>有序列表最佳实践</h4><p>CommonMark and a few other lightweight markup languages let you use a parenthesis (<code>)</code>) as a delimiter (e.g., <code>1) First item</code>), but not all Markdown applications support this, so it isn’t a great option from a compatibility perspective. For compatibility, use periods only.<br>渲染效果如下所示：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+</blockquote>
+<h3 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h3><p>块引用可以包含多个段落。为段落之间的空白行添加一个 <code>&gt;</code> 符号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+<h3 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h3><p>块引用可以嵌套。在要嵌套的段落前添加一个 <code>&gt;&gt;</code> 符号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<blockquote>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+</blockquote>
+<h3 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h3><p>块引用可以包含其他 Markdown 格式的元素。并非所有元素都可以使用，你需要进行实验以查看哪些元素有效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; #### The quarterly results look great!</span><br><span class="line">&gt;</span><br><span class="line">&gt; - Revenue was off the chart.</span><br><span class="line">&gt; - Profits were higher than ever.</span><br><span class="line">&gt;</span><br><span class="line">&gt;  *Everything* is going according to **plan**.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<blockquote>
+<h4 id="The-quarterly-results-look-great"><a href="#The-quarterly-results-look-great" class="headerlink" title="The quarterly results look great!"></a>The quarterly results look great!</h4><ul>
+<li>Revenue was off the chart.</li>
+<li>Profits were higher than ever.</li>
+</ul>
+<p><em>Everything</em> is going according to <strong>plan</strong>.</p>
+</blockquote>
+<h2 id="6-Markdown列表语法"><a href="#6-Markdown列表语法" class="headerlink" title="6.Markdown列表语法"></a>6.Markdown列表语法<br></h2><p>可以将多个条目组织成有序或无序列表。</p>
+<h3 id="有序列表-1"><a href="#有序列表-1" class="headerlink" title="有序列表"></a>有序列表</h3><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>1. First item   2. Second item   3. Third item   4. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>4. Fourth item</td>
+</tr>
+<tr>
+<td><code>1. First item   1. Second item   1. Third item   1. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>4. Fourth item</td>
+</tr>
+<tr>
+<td><code>1. First item   8. Second item   3. Third item   5. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>4. Fourth item</td>
+</tr>
+<tr>
+<td><code>1. First item   2. Second item   3. Third item       1. Indented item       2. Indented item   4. Fourth item</code></td>
+<td><code>&lt;ol&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item   &lt;ol&gt;   &lt;li&gt;Indented item&lt;/li&gt;   &lt;li&gt;Indented item&lt;/li&gt;   &lt;/ol&gt;   &lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ol&gt;</code></td>
+<td>1. First item<br>2. Second item<br>3. Third item<br>    1. Indented item<br>    2. Indented item<br>4. Fourth item</td>
+</tr>
+</tbody></table>
+<h4 id="有序列表最佳实践-1"><a href="#有序列表最佳实践-1" class="headerlink" title="有序列表最佳实践"></a>有序列表最佳实践</h4><p>CommonMark and a few other lightweight markup languages let you use a parenthesis (<code>)</code>) as a delimiter (e.g., <code>1) First item</code>), but not all Markdown applications support this, so it isn’t a great option from a compatibility perspective. For compatibility, use periods only.<br></p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>- First item   - Second item   - Third item   - Fourth item</code></td>
+<td><code>&lt;ul&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ul&gt;</code></td>
+<td>- First item<br>- Second item<br>- Third item<br>- Fourth item</td>
+</tr>
+<tr>
+<td><code>* First item   * Second item   * Third item   * Fourth item</code></td>
+<td><code>&lt;ul&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ul&gt;</code></td>
+<td>- First item<br>- Second item<br>- Third item<br>- Fourth item</td>
+</tr>
+<tr>
+<td><code>+ First item   + Second item   + Third item   + Fourth item</code></td>
+<td><code>&lt;ul&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item&lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ul&gt;</code></td>
+<td>- First item<br>- Second item<br>- Third item<br>- Fourth item</td>
+</tr>
+<tr>
+<td><code>- First item   - Second item   - Third item       - Indented item       - Indented item   - Fourth item</code></td>
+<td><code>&lt;ul&gt;   &lt;li&gt;First item&lt;/li&gt;   &lt;li&gt;Second item&lt;/li&gt;   &lt;li&gt;Third item   &lt;ul&gt;   &lt;li&gt;Indented item&lt;/li&gt;   &lt;li&gt;Indented item&lt;/li&gt;   &lt;/ul&gt;   &lt;/li&gt;   &lt;li&gt;Fourth item&lt;/li&gt;   &lt;/ul&gt;</code></td>
+<td>- First item<br>- Second item<br>- Third item<br>    - Indented item<br>    - Indented item<br>- Fourth item</td>
+</tr>
+</tbody></table>
+<h4 id="无序列表最佳实践"><a href="#无序列表最佳实践" class="headerlink" title="无序列表最佳实践"></a>无序列表最佳实践</h4><p>Markdown applications don’t agree on how to handle different delimiters in the same list. For compatibility, don’t mix and match delimiters in the same list — pick one and stick with it.<br></p>
+<h3 id="在列表中嵌套其他元素"><a href="#在列表中嵌套其他元素" class="headerlink" title="在列表中嵌套其他元素"></a>在列表中嵌套其他元素</h3><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符，如下例所示：</p>
+<h4 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*   This is the first list item.</span><br><span class="line">*   Here&#x27;s the second list item.</span><br><span class="line"></span><br><span class="line">    I need to add another paragraph below the second list item.</span><br><span class="line"></span><br><span class="line">*   And here&#x27;s the third list item.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<ul>
+<li><p>This is the first list item.</p>
+</li>
+<li><p>Here’s the second list item.</p>
+<p>  I need to add another paragraph below the second list item.</p>
+</li>
+<li><p>And here’s the third list item.</p>
+</li>
+</ul>
+<h4 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*   This is the first list item.</span><br><span class="line">*   Here&#x27;s the second list item.</span><br><span class="line"></span><br><span class="line">    &gt; A blockquote would look great below the second list item.</span><br><span class="line"></span><br><span class="line">*   And here&#x27;s the third list item.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<ul>
+<li><p>This is the first list item.</p>
+</li>
+<li><p>Here’s the second list item.</p>
+<blockquote>
+<p>A blockquote would look great below the second list item.</p>
+</blockquote>
+</li>
+<li><p>And here’s the third list item.</p>
+</li>
+</ul>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p><a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/#code-blocks">代码块</a>通常采用四个空格或一个制表符缩进。当它们被放在列表中时，请将它们缩进八个空格或两个制表符。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.  Open the file.</span><br><span class="line">2.  Find the following code block on line 21:</span><br><span class="line"></span><br><span class="line">        &amp;lt;html&gt;</span><br><span class="line">          &amp;lt;head&gt;</span><br><span class="line">            &amp;lt;title&gt;Test&amp;lt;/title&gt;</span><br><span class="line">          &amp;lt;/head&gt;</span><br><span class="line"></span><br><span class="line">3.  Update the title to match the name of your website.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<ol>
+<li><p>Open the file.</p>
+</li>
+<li><p>Find the following code block on line 21:</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;html&gt;</span><br><span class="line">  &amp;lt;head&gt;</span><br><span class="line">    &amp;lt;title&gt;Test&amp;lt;/title&gt;</span><br><span class="line">  &amp;lt;/head&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update the title to match the name of your website.</p>
+</li>
+</ol>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.  Open the file containing the Linux mascot.</span><br><span class="line">2.  Marvel at its beauty.</span><br><span class="line"></span><br><span class="line">    ![Tux, the Linux mascot](/assets/images/tux.png)</span><br><span class="line"></span><br><span class="line">3.  Close the file.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<ol>
+<li><p>Open the file containing the Linux mascot.</p>
+</li>
+<li><p>Marvel at its beauty.</p>
+<p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAB5CAMAAAD4dHQjAAAArlBMVEX////Hx8ePj49XV1c7OzsfHx9JSUlzc3Orq6vx8fHj4+MtLS2BgYG5ubnV1dVlZWWdnZ3///9xXymZeBfClhWnghZwWxpzb2RVRxzdqhP4vhE6Mx2Mbxi0jBUtKR7qtBJxYzhXU0hJRTpIPRzPoBRjURt+ZRl+aShya1WBfXJyZ0b8/Pz5+fn9/f329vbu7u7p6enm5ubv7+/6+vro6Oj39/fz8/Ps7Oz09PTr6+uCz11jAAAAAXRSTlMAQObYZgAABuxJREFUeAG1mgd/ozwShy3gD4g+a/DZgsDeubwlcXq2fP8vdvEAgRCDUthne8EPoxkNI35ZfAhhmBZqbMeVi/nxHB+vcbyZFdLBGYJZHaGPs9gzrpmLIfNbQoxjz5VyH0Pmz4uJSaI5HALTmHNIYmiYYbtI6AhmKV8N1kyr9adTb0FL8mUJ9MSzFLA+KfNLbCcw0eerkqT+WNNHiy/oGc9Gh/iixGg+VjqtIyJG2vNKBJ2IwYTUIP2ZyoslZv9DbXrBQIvxdYlLNQ7Q/MFNOC1zSjyiMJFEIe/u2ubQM9aMEl4pp7lzIopamTmXJAGIXACSqJFwLoy+xPz6Zqw/VrxI4j8hEZyN0Pi2TNNs9R83aCXWjJKAq3e9UTVZ3uTEw1ySCLBOSSnUxbpQqlhfKFWUSDg3s7VhXpokU2pZVEpVxVIpVWXfDa83KRkzSPDfVA3ZFP/DrJJ1pc5QbWeTSGClzrDbqaqcKycCpcqqt47yQqn1fCW8Vau9GpCVmepJ/K/3rk213b+Kpdrn6emX2YZIB9irarXddYqiPLDzmz3XU8sCZ35ZFlVTuuVqw66/omSmU4rHef2+UZtVuS6KwzY/sEJlf3vkzTRE8s0aMjjlOc2Ki10dzuFv8eqpBecrEruZHdy/VEfxj0dMMMvAEgHNtBJ9awss/VdQQzTLUcjBCTrh/VOklUqX313qsGaYuj30pyAvMYwkopbBevnRl46kAY0Sff1IH4IJaRwb+FqFtXMoTZCgh/v5g1xME8gvnuvapLo0hYMevvzkqdeXNIX4yvucyEeNQ9NYwGeT3x1xBE2TfP4k7KDBIg3SxyeTH6IlIQ2c+sD9eFo8H13adXjcUzpL8JF2Yvj6tDMOW4IPdn3OpcV9ySM9og45RoMl391OhIP6TKqHAze7CjDe205iT1u/gw3phh+YkOpLvLgLRIszWDDzfY91R4y0rcur4/kCAwzv3bl360DMtxvxeH1ze3fi9v76eDYU572hWBxI9CaQh/u7Ho/3l29DSXShDALh2u9H0So65HFYYHbX+GN9ICb59QG35enx7i23D/RCWN/b+wrM7VWjpJYfd+e5HnT8hPR7pS0tn8N2qIWXSmMxwJd02143MTp8X2HfobV49TInaIk0jxFX9tMu7xidxeZrBPTr5ddJE73Vur6b5qG/XiT1w3EIhkS3SS4fNZLbIzFRHT1emJ6CTJZ4xPy803FDNT73OmiTYnUSi5hfd3quiIkBpy8Jx14MdJK43uiPd3puX5LikoQu86KVSMDQV9agwqQwJAmtxGglZCPkrOsFXShMZOkkAWqIEghdIINQ+Ih0usi1piUmagRJX+oyMgjFxQnf8Tg5WgkXidHfh3oeukntWRP5Wkk30f1+r+PxIUGHwRaNhEPp0q7n5igd9HB48YRGArfbiHruKfTxCleOP7Zi5EVR7Hnq1HWUjt/kgi/qMGn0gRJgValndts6lnfW1lWETBXo43hjx6EQ+/4rzFgeb97j+EnmXqkdhljh2eNCXqm+xQ95ftDxFGGnlMrRsUzTtMjPnSFs/r9Me2OxvNRX8dHI1TMZWsqseYeIYSwyxlL1WNUhR3SvX61DewWzbu+1yl/n3gt8HFSfDWpcnUUSMsUc8Mw+VS8U/eeWawPbVL2mQE2isfzw0F5apengRo1WEVnIDzs1oHt9bUxbrgQqNUJutg6fE/WWZbf7f09JXKgxVmhbSbkbuw80RFMTy6VRqjGWEHUgKNQIGRqskVmYIWOtxtg0W8VAqsZYo8E9fk6itr6sJWqUFA023YxLzAlJiriW7NRE4hrG1+uRO9coB+6TLlI1SpVrJLzhCzUB9xaBCzXODkxMvzUbfuI+fbmQdXVNVpgjr8Z7sMBGTZGetj32aooVQj4xanrwBFtrsbDWmv9j09NkD16paQroJVUZTBTwk8SFXuLhoKZJEY5Nkj8fKIDSkFuLBDulofDl5c05xRVF9nRK+fmYLMxSacktQVdDzf0V8WuLpZoiyxFoi4tJgTiiy1837ar9vn86UuTgxG5KsYZ/es6jUHrWAEzXI6KrZy6JKDIsMOVkFL4hF++VZGDs2DCESIzA9NEyWpsXtYLBSumpMMrIPW7WjYIxy0rp+ahkCQSyfxbNL2aXrGBHwy9tLfdFlu70zVgvaR2OHM6OblznsVyvlunE4GLFRij4ak+4RmxyfR3OOhZD2qsCvqpcDT08bxpJ/fFD7FzvGCKSGNhevLlMjL/oW77Nx0KLNHzky6pXjXsEi1HscjdoVTGHrNdYwLpINyfDxWr6dWLk9y1Z2d2QltDx0RJzNU5ZijruKsthicVHiFzjRKgN3jOB9f6w3gJWt8lnRzg2ANMJF+f5P0W+bcQV1sTgAAAAAElFTkSuQmCC" alt="Tux, the Linux mascot"></p>
+</li>
+<li><p>Close the file.</p>
+</li>
+</ol>
+<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>You can nest an unordered list in an ordered list, or vice versa.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. First item</span><br><span class="line">2. Second item</span><br><span class="line">3. Third item</span><br><span class="line">    - Indented item</span><br><span class="line">    - Indented item</span><br><span class="line">4. Fourth item</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item<ul>
+<li>Indented item</li>
+<li>Indented item</li>
+</ul>
+</li>
+<li>Fourth item<br></li>
+</ol>
+<h2 id="7-Markdown代码语法"><a href="#7-Markdown代码语法" class="headerlink" title="7.Markdown代码语法"></a>7.Markdown代码语法<br></h2><p>要将单词或短语表示为代码，请将其包裹在反引号 (<code>`</code>) 中。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>At the command prompt, type `nano`.</code></td>
+<td><code>At the command prompt, type &lt;code&gt;nano&lt;/code&gt;.</code></td>
+<td>At the command prompt, type <code>nano</code>.</td>
+</tr>
+</tbody></table>
+<h3 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h3><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(<code>``</code>)中。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>``Use `code` in your Markdown file.``</code></td>
+<td><code>&lt;code&gt;Use `code` in your Markdown file.&lt;/code&gt;</code></td>
+<td><code>Use `code` in your Markdown file.</code></td>
+</tr>
+</tbody></table>
 <hr>
-<h2 id="初始化GPIO口"><a href="#初始化GPIO口" class="headerlink" title="初始化GPIO口"></a>初始化GPIO口</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line"></span><br><span class="line">GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;</span><br><span class="line">GPIO_InitStructure.GPIO_Pin = GPIO_Pin_x;</span><br><span class="line">GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line"></span><br><span class="line">GPIO_Init(GPIOX,&amp;GPIO_InitStructure);</span><br></pre></td></tr></table></figure>
-<p><strong>具体代码解释：</strong></p>
+<h3 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h3><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;html&gt;</span><br><span class="line">  &amp;lt;head&gt;</span><br><span class="line">  &amp;lt;/head&gt;</span><br><span class="line">&amp;lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
+<p>渲染效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;html&gt;</span><br><span class="line">  &amp;lt;head&gt;</span><br><span class="line">  &amp;lt;/head&gt;</span><br><span class="line">&amp;lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong> 要创建不用缩进的代码块，请使用 <a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/fenced-code-blocks.html">围栏式代码块（fenced code blocks）</a>.</p>
+<hr>
+<h2 id="8-Markdown分隔线语法"><a href="#8-Markdown分隔线语法" class="headerlink" title="8.Markdown分隔线语法"></a>8.Markdown分隔线语法<br></h2><p>要创建分隔线，请在单独一行上使用三个或多个星号 (<code>***</code>)、破折号 (<code>---</code>) 或下划线 (<code>___</code>) ，并且不能包含其他内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">_________________</span><br></pre></td></tr></table></figure>
+
+<p>以上三个分隔线的渲染效果看起来都一样：</p>
+<hr>
+<h3 id="分隔线（Horizontal-Rule）用法最佳实践"><a href="#分隔线（Horizontal-Rule）用法最佳实践" class="headerlink" title="分隔线（Horizontal Rule）用法最佳实践"></a>分隔线（Horizontal Rule）用法最佳实践</h3><p>为了兼容性，请在分隔线的前后均添加空白行。<br></p>
+<h2 id="9-Markdown链接语法"><a href="#9-Markdown链接语法" class="headerlink" title="9.Markdown链接语法"></a>9.Markdown链接语法<br></h2><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br><br>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code><br><br>对应的HTML代码：<code>&lt;a href=&quot;超链接地址&quot; title=&quot;超链接title&quot;&gt;超链接显示名&lt;/a&gt;</code><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn)。</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：<br><br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown语法 (opens new window)</a>。</p>
+<hr>
+<h3 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h3><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn &quot;最好的markdown教程&quot;)。</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<p>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/" title="最好的markdown教程">Markdown语法 (opens new window)</a>。</p>
+<h3 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h3><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：<br><br><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn(opens new window)</a><br><a href="mailto:&#x66;&#x61;&#x6b;&#101;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#x6d;">fake@example.com</a><br></p>
+<h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接<br></h3><p><a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/fenced-code-blocks.html#emphasis">强调</a> 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：<br><br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF (opens new window)</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide (opens new window)</a></em>.<br>See the section on <a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/fenced-code-blocks.html#code"><code>code</code></a>.<br></p>
+<h3 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h3><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。<br></p>
+<h4 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h4><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。</p>
+<p>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<p>以下示例格式对于链接的第一部分效果相同：<br></p>
+<ul>
+<li><code>[hobbit-hole][1]</code></li>
+<li><code>[hobbit-hole] [1]</code><br></li>
+</ul>
+<h4 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式<br></h4><p>引用类型链接的第二部分使用以下属性设置格式：<br></p>
+<ol>
+<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如<code>[label]:</code>）。</li>
+<li>链接的URL，可以选择将其括在尖括号中。</li>
+<li>链接的可选标题，可以将其括在双引号，单引号或括号中。<br><br>以下示例格式对于链接的第二部分效果相同：<br></li>
+</ol>
+<ul>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle &quot;Hobbit lifestyles&quot;</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle &#39;Hobbit lifestyles&#39;</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; &quot;Hobbit lifestyles&quot;</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; &#39;Hobbit lifestyles&#39;</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; (Hobbit lifestyles)</code><br><br>可以将链接的第二部分放在Markdown文档中的任何位置。有些人将它们放在出现的段落之后，有些人则将它们放在文档的末尾（例如尾注或脚注）。<br></li>
+</ul>
+<h3 id="链接最佳实践"><a href="#链接最佳实践" class="headerlink" title="链接最佳实践"></a>链接最佳实践<br></h3><p>不同的 Markdown 应用程序处理URL中间的空格方式不一样。为了兼容性，请尽量使用%20代替空格。<br><br><code>[link](https://www.example.com/my%20great%20page)</code><br></p>
+<h2 id="10-Markdown图片语法"><a href="#10-Markdown图片语法" class="headerlink" title="10.Markdown图片语法"></a>10.Markdown图片语法<br></h2><p>要添加图像，请使用感叹号 (<code>!</code>), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<p>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
+<p>对应的HTML代码：<code>&lt;img src=&quot;图片链接&quot; alt=&quot;图片alt&quot; title=&quot;图片title&quot;&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这是图片](/assets/img/philly-magic-garden.jpg &quot;Magic Gardens&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<p><img src="https://markdown.com.cn/assets/img/philly-magic-garden.9c0b4415.jpg" alt="这是图片" title="Magic Gardens"></p>
+<h3 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h3><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![沙漠中的岩石图片](/assets/img/shiprock.jpg &quot;Shiprock&quot;)](https://markdown.com.cn)</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<p><a target="_blank" rel="noopener" href="https://markdown.com.cn/"><img src="https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg" alt="沙漠中的岩石图片" title="Shiprock"></a><br></p>
+<h2 id="11-Markdown转义字符语法"><a href="#11-Markdown转义字符语法" class="headerlink" title="11.Markdown转义字符语法"></a>11.Markdown转义字符语法<br></h2><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\* Without the backslash, this would be a bullet in an unordered list.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下：</p>
+<ul>
+<li>Without the backslash, this would be a bullet in an unordered list.</li>
+</ul>
+<h3 id="可做转义的字符"><a href="#可做转义的字符" class="headerlink" title="可做转义的字符"></a>可做转义的字符</h3><p>以下列出的字符都可以通过使用反斜杠字符从而达到转义目的。</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>|backslash</td>
+<td></td>
+</tr>
+<tr>
+<td>&#96;</td>
+<td>backtick (see also <a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/fenced-code-blocks.html#escaping-backticks">escaping backticks in code</a>)</td>
+</tr>
+<tr>
+<td>*</td>
+<td>asterisk</td>
+</tr>
+<tr>
+<td>_</td>
+<td>underscore</td>
+</tr>
+<tr>
+<td>{ }</td>
+<td>curly braces</td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td>brackets</td>
+</tr>
+<tr>
+<td>( )</td>
+<td>parentheses</td>
+</tr>
+<tr>
+<td>#</td>
+<td>pound sign</td>
+</tr>
+<tr>
+<td>+</td>
+<td>plus sign</td>
+</tr>
+<tr>
+<td>-</td>
+<td>minus sign (hyphen)</td>
+</tr>
+<tr>
+<td>.</td>
+<td>dot</td>
+</tr>
+<tr>
+<td>!</td>
+<td>exclamation mark</td>
+</tr>
+<tr>
+<td>|</td>
+<td>pipe (see also <a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/escaping-pipe-characters-in-tables.html">escaping pipe in tables</a>)</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="特殊字符自动转义"><a href="#特殊字符自动转义" class="headerlink" title="特殊字符自动转义"></a>特殊字符自动转义</h3><p>在 HTML 文件中，有两个字符需要特殊处理： <code>&lt;</code> 和 <code>&amp;</code> 。 <code>&lt;</code> 符号用于起始标签，<code>&amp;</code> 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是 <code>&amp;lt;</code> 和 <code>&amp;amp;</code>.<br><br><code>&amp;</code> 符号其实很容易让写作网页文件的人感到困扰，如果你要打「AT&amp;T」 ，你必须要写成「<code>AT&amp;amp;T</code>」 ，还得转换网址内的 <code>&amp;</code> 符号，如果你要链接到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://images.google.com/images?num=30&amp;q=larry+bird</span><br></pre></td></tr></table></figure>
+
+<p>你必须要把网址转成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://images.google.com/images?num=30&amp;amp;q=larry+bird</span><br></pre></td></tr></table></figure>
+
+<p>才能放到链接标签的 <code>href</code> 属性里。不用说也知道这很容易忘记，这也可能是 HTML 标准检查所检查到的错误中，数量最多的。<br><br>Markdown 允许你直接使用这些符号，它帮你自动转义字符。如果你使用 <code>&amp;</code> 符号的作为 HTML 实体的一部分，那么它不会被转换，而在其它情况下，它则会被转换成 <code>&amp;amp;</code>。所以你如果要在文件中插入一个著作权的符号，你可以这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;copy;</span><br></pre></td></tr></table></figure>
+
+<p>Markdown 将不会对这段文字做修改，但是如果你这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT&amp;T</span><br></pre></td></tr></table></figure>
+
+<p>Markdown 就会将它转为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT&amp;amp;T</span><br></pre></td></tr></table></figure>
+
+<p>类似的状况也会发生在 <code>&lt;</code> 符号上，因为 Markdown 支持 <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/#%E5%86%85%E8%81%94-html">行内 HTML</a> ，如果你使用 <code>&lt;</code> 符号作为 HTML 标签的分隔符，那 Markdown 也不会对它做任何转换，但是如果你是写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 &lt; 5</span><br></pre></td></tr></table></figure>
+
+<p>Markdown 将会把它转换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 &amp;lt; 5</span><br></pre></td></tr></table></figure>
+
+<p>需要特别注意的是，在 Markdown 的块级元素和内联元素中， <code>&lt;</code> 和 <code>&amp;</code> 两个符号都会被自动转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML。<br><em><strong>（在 HTML 语法中，你要手动把所有的 <code>&lt;</code> 和 <code>&amp;</code> 都转换为 HTML 实体。）</strong></em><br></p>
+<h2 id="12-Markdown内嵌HTML标签"><a href="#12-Markdown内嵌HTML标签" class="headerlink" title="12.Markdown内嵌HTML标签"></a>12.Markdown内嵌HTML标签<br></h2><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。<br></p>
+<h3 id="行级內联标签"><a href="#行级內联标签" class="headerlink" title="行级內联标签"></a>行级內联标签</h3><p>HTML 的行级內联标签如 <code>&lt;span&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;del&gt;</code> 不受限制，可以在 Markdown 的段落、列表或是标题里任意使用。依照个人习惯，甚至可以不用 Markdown 格式，而采用 HTML 标签来格式化。例如：如果比较喜欢 HTML 的  <code>&lt;a&gt;</code> 或 <code>&lt;img&gt;</code> 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图片语法。当你需要更改元素的属性时（例如为文本指定颜色或更改图像的宽度），使用 HTML 标签更方便些。</p>
+<p>HTML 行级內联标签和区块标签不同，在內联标签的范围内， Markdown 的语法是可以解析的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This **word** is bold. This &lt;em&gt;word&lt;/em&gt; is italic.</span><br></pre></td></tr></table></figure>
+
+<p>渲染效果如下:</p>
+<p>This <strong>word</strong> is bold. This <em>word</em> is italic.</p>
+<h3 id="区块标签"><a href="#区块标签" class="headerlink" title="区块标签"></a>区块标签</h3><p>区块元素──比如 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code> 等标签，必须在前后加上空行，以便于内容区分。而且这些元素的开始与结尾标签，不可以用 tab 或是空白来缩进。Markdown 会自动识别这区块元素，避免在区块标签前后加上没有必要的 <code>&lt;p&gt;</code> 标签。</p>
+<p>例如，在 Markdown 文件里加上一段 HTML 表格：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">This is a regular paragraph.</span><br><span class="line"></span><br><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;Foo&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line"></span><br><span class="line">This is another regular paragraph.</span><br></pre></td></tr></table></figure>
+
+<p>请注意，Markdown 语法在 HTML 区块标签中将不会被进行处理。例如，你无法在 HTML 区块内使用 Markdown 形式的<code>*强调*</code>。</p>
+<h3 id="HTML-用法最佳实践"><a href="#HTML-用法最佳实践" class="headerlink" title="HTML 用法最佳实践"></a>HTML 用法最佳实践</h3><p>出于安全原因，并非所有 Markdown 应用程序都支持在 Markdown 文档中添加 HTML。如有疑问，请查看相应 Markdown 应用程序的手册。某些应用程序只支持 HTML 标签的子集。</p>
+<p>对于 HTML 的块级元素 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code> 和 <code>&lt;p&gt;</code>，请在其前后使用空行（blank lines）与其它内容进行分隔。尽量不要使用制表符（tabs）或空格（spaces）对 HTML 标签做缩进，否则将影响格式。</p>
+<p>在 HTML 块级标签内不能使用 Markdown 语法。例如 <code>&lt;p&gt;italic and **bold**&lt;/p&gt;</code> 将不起作用。<br></p>
+<h1 id="Markdown扩展语法"><a href="#Markdown扩展语法" class="headerlink" title="Markdown扩展语法"></a>Markdown扩展语法<br></h1><h2 id="1-Markdown扩展语法入门"><a href="#1-Markdown扩展语法入门" class="headerlink" title="1.Markdown扩展语法入门"></a>1.Markdown扩展语法入门<br></h2><p>John Gruber的原始设计文档中概述的<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic_syntax">基本语法</a>主要是为了应付大多数情况下的日常所需元素，但对于某些人来说还不够，这就是扩展语法的用武之地。</p>
+<p>一些个人和组织开始通过添加其他元素（例如表，代码块，语法突出显示，URL自动链接和脚注）来扩展基本语法。可以通过使用基于基本Markdown语法的轻量级标记语言，或通过向兼容的Markdown处理器添加扩展来启用这些元素。<br></p>
+<h2 id="2-Markdown扩展语法可用性"><a href="#2-Markdown扩展语法可用性" class="headerlink" title="2.Markdown扩展语法可用性"></a>2.Markdown扩展语法可用性<br></h2><p>并非所有Markdown应用程序都支持扩展语法元素。需要检查应用程序所使用的轻量级标记语言是否支持要使用的扩展语法元素。如果没有，那么仍然有可能在Markdown处理器中启用扩展。</p>
+<h3 id="轻量标记语言"><a href="#轻量标记语言" class="headerlink" title="轻量标记语言"></a>轻量标记语言</h3><p>有几种轻量级标记语言是Markdown的超集。它们包含Gruber的基本语法，并通过添加其他元素（例如表，代码块，语法突出显示，URL自动链接和脚注）在此基础上构建。许多最受欢迎的Markdown应用程序使用以下轻量级标记语言之一：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://commonmark.org/">CommonMark(opens new window)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.github.com/gfm/">GitHub Flavored Markdown (GFM)(opens new window)</a></li>
+<li><a target="_blank" rel="noopener" href="https://michelf.ca/projects/php-markdown/extra/">Markdown Extra(opens new window)</a></li>
+<li><a target="_blank" rel="noopener" href="https://fletcherpenney.net/multimarkdown/">MultiMarkdown(opens new window)</a></li>
+<li><a target="_blank" rel="noopener" href="https://rmarkdown.rstudio.com/">R Markdown(opens new window)</a><br></li>
+</ul>
+<h3 id="Markdown-处理器"><a href="#Markdown-处理器" class="headerlink" title="Markdown 处理器"></a>Markdown 处理器<br></h3><p>有许多<a target="_blank" rel="noopener" href="https://github.com/markdown/markdown.github.com/wiki/Implementations">Markdown处理器 (opens new window)</a>可用。它们中的许多允许添加启用扩展语法元素的扩展。查看所使用处理器的文档以获取更多信息。<br></p>
+<h2 id="3-Markdown表格"><a href="#3-Markdown表格" class="headerlink" title="3.Markdown表格"></a>3.Markdown表格<br></h2><p>要添加表，请使用三个或多个连字符（<code>---</code>）创建每列的标题，并使用管道（<code>|</code>）分隔每列。您可以选择在表的任一端添加管道。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></table></figure>
+
+<p>呈现的输出如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody></table>
+<p>单元格宽度可以变化，如下所示。呈现的输出将看起来相同。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax | Description |</span><br><span class="line">| --- | ----------- |</span><br><span class="line">| Header | Title |</span><br><span class="line">| Paragraph | Text |</span><br></pre></td></tr></table></figure>
+
+<p><strong>Tip:</strong> 使用连字符和管道创建表可能很麻烦。为了加快该过程，请尝试使用<a target="_blank" rel="noopener" href="https://www.tablesgenerator.com/markdown_tables">Markdown Tables Generator</a>。使用图形界面构建表，然后将生成的Markdown格式的文本复制到文件中。</p>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（<code>:</code>），将列中的文本对齐到左侧，右侧或中心。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description | Test Text     |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Header      | Title       | Here&#x27;s this   |</span><br><span class="line">| Paragraph   | Text        | And more      |</span><br></pre></td></tr></table></figure>
+
+<p>呈现的输出如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+<th>Test Text</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Header</td>
+<td>Title</td>
+<td>Here’s this</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+<td>And more</td>
+</tr>
+</tbody></table>
+<h3 id="格式化表格中的文字"><a href="#格式化表格中的文字" class="headerlink" title="格式化表格中的文字"></a>格式化表格中的文字</h3><p>您可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（<code>`</code>）中的单词或短语，而不是代码块）和强调。</p>
+<p>您不能添加标题，块引用，列表，水平规则，图像或HTML标签。</p>
+<h3 id="在表中转义管道字符"><a href="#在表中转义管道字符" class="headerlink" title="在表中转义管道字符"></a>在表中转义管道字符</h3><p>您可以使用表格的HTML字符代码（<code>&amp;#124;</code>）在表中显示竖线（<code>|</code>）字符。<br></p>
+<h2 id="4-Markdown围栏代码块"><a href="#4-Markdown围栏代码块" class="headerlink" title="4.Markdown围栏代码块"></a>4.Markdown围栏代码块<br></h2><p>Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/code-blocks.html">代码块</a>。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（<code>```</code>）或三个波浪号（<code>~~~</code>)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<p>呈现的输出如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Tip</strong>要在代码块中显示反引号？请参阅了解如何<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/escaping-backticks.html">转义</a>它们。</p>
+<h3 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h3><p>许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<p>呈现的输出如下所示：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;firstName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lastName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Smith&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">25</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-Markdown脚注"><a href="#5-Markdown脚注" class="headerlink" title="5.Markdown脚注"></a>5.Markdown脚注<br></h2><p>脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。</p>
+<p>要创建脚注参考，请在方括号（<code>[^1]</code>）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。</p>
+<p>在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（<code>[^1]: My footnote.</code>）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Here&#x27;s a simple footnote,[^1] and here&#x27;s a longer one.[^bignote]</span><br><span class="line"></span><br><span class="line">[^1]: This is the first footnote.</span><br><span class="line"></span><br><span class="line">[^bignote]: Here&#x27;s one with multiple paragraphs and code.</span><br><span class="line"></span><br><span class="line">    Indent paragraphs to include them in the footnote.</span><br><span class="line"></span><br><span class="line">    `&#123; my code &#125;`</span><br><span class="line"></span><br><span class="line">    Add as many paragraphs as you like.</span><br></pre></td></tr></table></figure>
+
+<p>呈现的输出如下所示：</p>
+<p>Here’s a simple footnote,[^1] and here’s a longer one.[^bignote]</p>
+<p>[^1]: This is the first footnote.</p>
+<p>[^bignote]: Here’s one with multiple paragraphs and code.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Indent paragraphs to include them in the footnote.</span><br><span class="line"></span><br><span class="line">`&#123; my code &#125;`</span><br><span class="line"></span><br><span class="line">Add as many paragraphs as you like.</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -732,7 +1405,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/31/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/GPIO/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/YAML%E6%A0%87%E7%AD%BE%E6%A0%BC%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -746,7 +1419,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/05/31/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/GPIO/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2025/01/01/YAML%E6%A0%87%E7%AD%BE%E6%A0%BC%E5%BC%8F/" class="post-title-link" itemprop="url">YAML标签格式</a>
         </h2>
 
         <div class="post-meta">
@@ -755,9 +1428,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-05-31 12:47:02 / 修改时间：12:44:01" itemprop="dateCreated datePublished" datetime="2025-05-31T12:47:02+08:00">2025-05-31</time>
+              <time title="创建时间：2025-01-01 18:00:00" itemprop="dateCreated datePublished" datetime="2025-01-01T18:00:00+08:00">2025-01-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-05-31 13:12:05" itemprop="dateModified" datetime="2025-05-31T13:12:05+08:00">2025-05-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E7%89%A9/" itemprop="url" rel="index"><span itemprop="name">杂物</span></a>
+                </span>
             </span>
 
           
@@ -772,67 +1460,1081 @@
 
       
           <hr>
-<h2 id="title-GPIOdate-2025-01-01-18-00-00tags-STM32-GPIOcategories-RM-PRIME-RM电控-学习记录-STM32"><a href="#title-GPIOdate-2025-01-01-18-00-00tags-STM32-GPIOcategories-RM-PRIME-RM电控-学习记录-STM32" class="headerlink" title="title: GPIOdate: 2025-01-01 18:00:00tags:  - STM32  - GPIOcategories:  - RM_PRIME  - RM电控  - 学习记录  - STM32 "></a>title: GPIO<br>date: 2025-01-01 18:00:00<br>tags:<br>  - STM32<br>  - GPIO<br>categories:<br>  - RM_PRIME<br>  - RM电控<br>  - 学习记录<br>  - STM32 </h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/31/YAML%E6%A0%87%E7%AD%BE%E6%A0%BC%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="St_w">
-      <meta itemprop="description" content="老大，欢迎回来喵~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stellato的星空">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/05/31/YAML%E6%A0%87%E7%AD%BE%E6%A0%BC%E5%BC%8F/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-05-31 10:15:28 / 修改时间：12:46:43" itemprop="dateCreated datePublished" datetime="2025-05-31T10:15:28+08:00">2025-05-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h2 id="title-YAML标签格式date-2025-01-01-18-00-00tags-YAMLcategories-杂物"><a href="#title-YAML标签格式date-2025-01-01-18-00-00tags-YAMLcategories-杂物" class="headerlink" title="title: YAML标签格式date: 2025-01-01 18:00:00tags:  - YAMLcategories:  - 杂物"></a>title: YAML标签格式<br>date: 2025-01-01 18:00:00<br>tags:<br>  - YAML<br>categories:<br>  - 杂物</h2><hr>
 <h2 id="title-Your-Post-Titledate-YYYY-MM-DD-HH-MM-SStags-Tag1-Tag2-Another-Tagcategories-Category1-SubCategoryA"><a href="#title-Your-Post-Titledate-YYYY-MM-DD-HH-MM-SStags-Tag1-Tag2-Another-Tagcategories-Category1-SubCategoryA" class="headerlink" title="title: Your Post Titledate: YYYY-MM-DD HH:MM:SStags:  - Tag1  - Tag2  - Another Tagcategories:  - Category1  - SubCategoryA "></a>title: Your Post Title<br>date: YYYY-MM-DD HH:MM:SS<br>tags:<br>  - Tag1<br>  - Tag2<br>  - Another Tag<br>categories:<br>  - Category1<br>  - SubCategoryA </h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/blog%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="St_w">
+      <meta itemprop="description" content="老大，欢迎回来喵~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stellato的星空">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/01/blog%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">blog搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-01-01 18:00:00" itemprop="dateCreated datePublished" datetime="2025-01-01T18:00:00+08:00">2025-01-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-05-31 12:55:37" itemprop="dateModified" datetime="2025-05-31T12:55:37+08:00">2025-05-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E7%89%A9/" itemprop="url" rel="index"><span itemprop="name">杂物</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="构建您的数字第二大脑：基于-Obsidian-的本地化个人博客系统搭建指南"><a href="#构建您的数字第二大脑：基于-Obsidian-的本地化个人博客系统搭建指南" class="headerlink" title="构建您的数字第二大脑：基于 Obsidian 的本地化个人博客系统搭建指南"></a>构建您的数字第二大脑：基于 Obsidian 的本地化个人博客系统搭建指南</h1><h2 id="1-引言：打造您的数字殿堂"><a href="#1-引言：打造您的数字殿堂" class="headerlink" title="1. 引言：打造您的数字殿堂"></a>1. 引言：打造您的数字殿堂</h2><h3 id="1-1-重申目标"><a href="#1-1-重申目标" class="headerlink" title="1.1. 重申目标"></a>1.1. 重申目标</h3><p>本报告旨在提供一份详尽的指南，帮助用户建立一个完全自主部署、在本地运行的个人博客系统。该系统将无缝集成并高效展示来自 Obsidian 的笔记内容，核心目标是创建一个既能作为个人思绪与记录的知识库，又能成为一个公开访问的分享平台，同时确保用户对自身数据和系统架构拥有完全的掌控权。</p>
+<h3 id="1-2-概览：构建之旅"><a href="#1-2-概览：构建之旅" class="headerlink" title="1.2. 概览：构建之旅"></a>1.2. 概览：构建之旅</h3><p>我们将共同探索从技术选型到最终部署的全过程。首先，我们会筛选出能够充分尊重并兼容 Obsidian 特有功能的核心技术；随后，深入剖析这些技术的安装与配置细节；接着，探讨如何将您的博客系统部署至互联网，使其能够被远程访问；最后，也是至关重要的一环，我们将研究如何加固您的博客系统，以抵御常见的网络安全威胁。此番旅程将赋予您将本地知识库转化为一个可分享、安全且高度个性化的在线空间的能力。</p>
+<h3 id="1-3-为何选择自托管与-Obsidian-结合"><a href="#1-3-为何选择自托管与-Obsidian-结合" class="headerlink" title="1.3. 为何选择自托管与 Obsidian 结合"></a>1.3. 为何选择自托管与 Obsidian 结合</h3><p>自托管个人博客并与 Obsidian 笔记系统深度结合，其核心驱动力在于用户对数据所有权、高度自定义能力以及摆脱供应商锁定的追求。用户明确要求系统“完全在本地运行、自己部署”，并能“良好地支持并展示来自 Obsidian 的 Markdown 文件” [用户查询]。这表明用户期望对其数据、软件选择和运营细节拥有最大限度的控制权，避免受制于第三方平台。Obsidian 作为知识管理的核心，其丰富的链接和格式化特性必须在博客系统中得到忠实再现，而非要求用户对内容进行大规模的二次加工。这种对控制权和 Obsidian 内容保真度的双重强调，意味着理想的解决方案必须优先考虑减少从 Obsidian 到公开博客的内容迁移阻力，尽可能保留 Obsidian 的核心功能。这通常需要选择那些专为 Obsidian 设计或具有高度适应性的工具，而非功能宽泛但需大量定制的通用方案。用户愿意为此投入相应的技术精力，以换取这种控制权和内容呈现的精确性。</p>
+<h2 id="2-基础选择：核心技术栈甄选"><a href="#2-基础选择：核心技术栈甄选" class="headerlink" title="2. 基础选择：核心技术栈甄选"></a>2. 基础选择：核心技术栈甄选</h2><h3 id="2-1-静态站点生成器-SSG-在-Obsidian-工作流中的角色"><a href="#2-1-静态站点生成器-SSG-在-Obsidian-工作流中的角色" class="headerlink" title="2.1. 静态站点生成器 (SSG) 在 Obsidian 工作流中的角色"></a>2.1. 静态站点生成器 (SSG) 在 Obsidian 工作流中的角色</h3><p>静态站点生成器 (Static Site Generator, SSG) 是一种软件工具，它读取源文件（通常是 Markdown 等纯文本格式），结合预设的模板和配置，最终生成一套由 HTML、CSS 和 JavaScript 文件组成的完整静态网站。这些静态文件可以直接部署到任何 Web 服务器上，无需服务器端动态处理。</p>
+<p>对于以 Obsidian 为核心的个人博客系统，SSG 是理想的选择，原因如下：</p>
+<ul>
+<li><strong>文件驱动</strong>: SSG 直接处理文件，这与 Obsidian 基于本地 Markdown 文件的管理方式天然契合。</li>
+<li><strong>性能优越</strong>: 生成的静态站点加载速度快，因为无需数据库查询或服务器端渲染。</li>
+<li><strong>安全性高</strong>: 静态站点不涉及复杂的服务器端逻辑，受攻击面较小。</li>
+<li><strong>部署灵活</strong>: 静态文件可以托管在各种平台，包括免费的静态托管服务、VPS 或个人服务器。</li>
+<li><strong>版本控制友好</strong>: Markdown 源文件和 SSG 配置都易于通过 Git 等工具进行版本控制。</li>
+</ul>
+<h3 id="2-2-必须保留的关键-Obsidian-特性深度解析"><a href="#2-2-必须保留的关键-Obsidian-特性深度解析" class="headerlink" title="2.2. 必须保留的关键 Obsidian 特性深度解析"></a>2.2. 必须保留的关键 Obsidian 特性深度解析</h3><p>为了确保博客系统能够真实反映 Obsidian 中的笔记体验，以下特性必须得到良好支持：</p>
+<ul>
+<li><p><strong>Wikilinks (双向链接)</strong>:</p>
+<ul>
+<li>标准 Wikilink: <code>[[内部链接]]</code></li>
+<li>带别名的 Wikilink: <code>[[内部链接|自定义显示文本]]</code></li>
+<li>链接到标题: <code>[[内部链接#标题]]</code></li>
+<li>链接到块: <code>[[内部链接#^blockID]]</code></li>
+<li><em>重要性</em>: Wikilinks 是 Obsidian 知识图谱和笔记间导航的基石。选择的 SSG 必须能正确解析这些链接，并生成有效的 HTML 链接，理想情况下应能保留别名并正确解析路径（例如，当笔记位于子文件夹时，支持“最短路径”解析）1。</li>
+</ul>
+</li>
+<li><p><strong>Callouts&#x2F;Admonitions (标注&#x2F;警告框)</strong>:</p>
+<ul>
+<li>语法: <code>&gt;[!INFO] 标题</code>, <code>&gt; 更多细节</code>, <code>&gt;- 可折叠警告</code> 4。</li>
+<li><em>重要性</em>: Callouts 在笔记中提供视觉结构和重点强调。SSG 应能以相似样式渲染这些元素，或提供机制（如 CSS、短代码、插件）来复现它们。支持不同类型（如 note, tip, warning, error 等）和自定义标题至关重要。</li>
+</ul>
+</li>
+<li><p><strong>Embeds (嵌入&#x2F;引用)</strong>:</p>
+<ul>
+<li>图片: <code>![[image.png]]</code>, <code>![[image.png|说明或尺寸]]</code></li>
+<li>PDF: <code>![[document.pdf]]</code></li>
+<li>音频: <code>![[audio.mp3]]</code></li>
+<li>视频: <code>![[video.mp4]]</code></li>
+<li>其他笔记: <code>![[another_note.md]]</code></li>
+<li><em>重要性</em>: Obsidian 允许无缝嵌入各种媒体和其他笔记。SSG 需要优雅地处理这些嵌入，可以是将它们转换为合适的 HTML 标签（如 <code>&lt;img&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>），或者内联嵌入笔记的内容。嵌入文件的路径解析至关重要 3。</li>
+</ul>
+</li>
+<li><p><strong>Tags (标签)</strong>:</p>
+<ul>
+<li>行内标签: <code>#tag</code>, <code>#nested/tag</code></li>
+<li>Frontmatter 标签: <code>tags: [tag1, tag2]</code></li>
+<li><em>重要性</em>: 标签对于组织和发现内容至关重要。SSG 理想情况下应能解析这些标签，并使其可用于创建标签索引、过滤内容或在页面上显示它们 2。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-针对-Obsidian-集成的-SSG-深度分析"><a href="#2-3-针对-Obsidian-集成的-SSG-深度分析" class="headerlink" title="2.3. 针对 Obsidian 集成的 SSG 深度分析"></a>2.3. 针对 Obsidian 集成的 SSG 深度分析</h3><p>在选择 SSG 时，面临一个核心的权衡：是选择一个“为 Obsidian 而生”的工具，还是一个通用的 SSG 并通过适配器（插件或脚本）来支持 Obsidian 特性。前者可能在开箱即用的 Obsidian 兼容性方面更胜一筹，设置更简单，但可能在通用 SSG 的生态系统广度或某些高级功能上有所不及。后者如 Hugo、Zola 或 MkDocs，本身功能强大、社区庞大，但实现完善的 Obsidian 兼容性则依赖于适配器层的质量和维护情况，这可能引入额外的复杂性或功能覆盖不全的风险。例如，某些适配器可能无法完美处理所有类型的嵌入文件，或者在新版 Obsidian 推出特性时存在兼容滞后。用户的选择将取决于其对设置复杂性的容忍度、对 Obsidian 特性完整性的要求，以及是否需要超出 Obsidian 内容展示之外的特定 SSG 功能。</p>
+<p>嵌入文件（尤其是非图片类型如 PDF、音视频和笔记引用）的处理能力是评估不同 SSG 解决方案时的关键差异点和潜在痛点。用户明确要求展示这些类型的嵌入内容。虽然图片嵌入 (<code>![[image.png]]</code>) 的支持较为普遍，但 PDF、音频和视频的嵌入通常需要 SSG 将其转换为特定的 HTML 标签（如 <code>&lt;embed&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>）或集成 JavaScript播放器。笔记内容的嵌入（即 Obsidian 中的块引用或页面引用 <code>![[note.md]]</code>）则要求 SSG 能够递归处理并内联相关内容。如果一个 SSG 解决方案仅仅是将这些嵌入转换为链接（例如 <code>ppeetteerrs/obsidian-zola</code> 对非图片&#x2F;笔记嵌入的处理方式 13），那么它并未满足用户期望的“展示”需求。即便支持嵌入，其渲染方式（例如，是使用基础的 HTML5 播放器还是功能丰富的播放器，PDF 是如何分页或缩放显示的）也会因工具而异。因此，用户必须仔细审查所选 SSG 及其插件对所有必需嵌入类型的处理能力，这可能需要实际测试或查阅详细的示例文档。在这方面支持不足可能会成为项目瓶颈，或迫使用户投入大量精力进行自定义开发（例如编写 Hugo shortcodes 或 MkDocs 宏）。</p>
+<p>以下是对几款主流 SSG 及其与 Obsidian 集成方案的详细分析：</p>
+<ul>
+<li><p><strong>Quartz (v4)</strong></p>
+<ul>
+<li><strong>概览</strong>: Quartz 被誉为“一个快速、功能完备的静态站点生成器，可将 Markdown 内容转换为功能齐全的网站”，由 Jacky Zhao 创建。V4 版本基于 TypeScript 重写，专注于可扩展性和易用性 1。它常被视为 Obsidian Publish 的免费替代品 1。</li>
+<li><strong>Obsidian 特性兼容性</strong>:<ul>
+<li><strong>Wikilinks &amp; 嵌入</strong>: 明确支持 Markdown 链接和 Wikilinks 1。<code>CrawlLinks</code> 插件负责解析 Wikilinks 3。支持通过 <code>![[syntax]]</code> 嵌入图片（可设置尺寸）、整个页面、特定标题下的内容以及块内容 3。<code>ObsidianFlavoredMarkdown</code> (OFM) 插件默认启用 Wikilinks、Callouts、Mermaid 图表、标签解析、块引用、YouTube 嵌入和视频嵌入 6。</li>
+<li><strong>Callouts</strong>: 内置支持 Admonition 风格的 Callouts 1。</li>
+<li><strong>标签</strong>: OFM 插件中的 <code>parseTags</code> 选项会解析并链接标签 6。Frontmatter 中的标签也受支持 2。</li>
+<li><strong>PDF&#x2F;音频嵌入</strong>: OFM 插件默认 <code>enableVideoEmbed: true</code> 6。Quartz v4 源码中的 <code>roam.ts</code> 转换器列出了 <code>videoComponent</code>, <code>audioComponent</code>, <code>pdfComponent</code> 选项，默认为 true 8，这表明支持这些文件的嵌入，很可能使用 <code>![[file.ext]]</code> 语法。然而，一个重要的警示是：无论使用何种过滤插件，所有非 Markdown 文件（如图片、录音、PDF 等）都会被复制到最终构建的公共输出中 7。这是一个关键的安全和隐私考量。</li>
+<li><strong>主题</strong>: Emile Bangma 已将 Obsidian 主题移植到 Quartz 1。</li>
+</ul>
+</li>
+<li><strong>安装与配置</strong>:<ul>
+<li>通过 <code>git clone</code>, <code>npm i</code>, <code>npx quartz create</code> 安装 11。</li>
+<li>内容放置于 <code>/content</code> 文件夹；<code>content/index.md</code> 作为首页 2。Obsidian 可直接编辑 <code>content</code> 文件夹 2。</li>
+<li>配置文件为 <code>quartz.config.ts</code> 15。关键配置项包括 <code>pageTitle</code>, <code>theme</code>, <code>analytics</code>, <code>baseUrl</code> 以及插件配置 16。</li>
+<li>建议为 <code>CrawlLinks</code> 插件设置 <code>markdownLinkResolution: &quot;shortest&quot;</code> 以获得类似 Obsidian 的链接解析行为 15。</li>
+</ul>
+</li>
+<li><strong>部署</strong>: 可托管于 GitHub Pages 14、Vercel 15 或通过 Docker 自行部署 17。</li>
+<li><strong>优势</strong>: 开箱即用的高度 Obsidian 兼容性，积极开发中，适合构建“数字花园”。</li>
+<li><strong>劣势&#x2F;注意事项</strong>: 所有非 Markdown 文件默认公开的问题 7 需要谨慎管理。有用户曾对其客户端 JavaScript 的使用对 Git diff 和页面加载速度产生影响表示担忧，尽管部分脚本可以移除 18。</li>
+</ul>
+</li>
+<li><p><strong>Hugo</strong></p>
+<ul>
+<li><strong>概览</strong>: 以其极高的构建速度和灵活性著称，使用 Go 语言编写 19。是构建各类网站的热门选择。</li>
+<li><strong>Obsidian 特性兼容性 (需额外工具&#x2F;配置)</strong>:<ul>
+<li><strong>Wikilinks &amp; 嵌入</strong>: Hugo 本身不原生支持 Obsidian 的 Wikilinks 或 <code>![[embeds]]</code>。这需要外部工具或主题层面的支持。<ul>
+<li><code>zoni/obsidian-export</code>: 一个 CLI 工具，可将 Obsidian Markdown 转换为 Hugo 能处理的“纯净”Markdown。它支持 <code>[[note]]</code> 和 <code>![[note]]</code> 形式的包含 10。它可以将 Wikilinks 转换为相对 Markdown 链接并处理嵌入文件 10。<code>obsidian-export</code> 会将 <code>[[note]]</code> 转换为标准 Markdown 链接，将 <code>![[note]]</code> 转换为图片标签或包含，并为 Hugo 渲染钩子提供了指导。</li>
+<li><code>chaosarium/quartz-plus</code>: 一个基于 Hugo 的解决方案（不同于 Jacky Zhao 的 Quartz），包含用于 Obsidian Vault 集成的预处理脚本。它支持 Wikilinks（用于笔记和附件，无需前导路径）、Wikilink 媒体嵌入（视频、PDF、音频）以及 Admonition 风格的 Callouts 23。</li>
+<li>诸如 <code>grdn</code> 24 之类的主题专为使用 Hugo 发布 Obsidian 内容而设计。</li>
+</ul>
+</li>
+<li><strong>Callouts</strong>: <code>chaosarium/quartz-plus</code> 支持 Admonition 风格的 Callouts 23。标准的 Hugo 则需要自定义短代码或 CSS 来复制 Obsidian Callouts 的外观。Obsidian 的 Callout 语法 <code>&gt;[!INFO]</code> 4 需要转换。</li>
+<li><strong>标签</strong>: Hugo 拥有强大的分类法 (taxonomy) 支持，因此如果标签能被正确解析到 frontmatter 或页面参数中，就能得到良好处理。<code>chaosarium/quartz-plus</code> 可以将行内标签添加到 YAML 元数据中 23。</li>
+<li><strong>PDF&#x2F;音频&#x2F;视频嵌入</strong>: <code>chaosarium/quartz-plus</code> 支持这些类型的 Wikilink 媒体嵌入 23。标准的 Hugo 则依赖于 Markdown 中的 HTML 或短代码。</li>
+</ul>
+</li>
+<li><strong>安装与配置</strong>:<ul>
+<li>官方安装指南：25。</li>
+<li>Jacob Kaplan-Moss 提出的工作流程 21：使用 <code>obsidian-git</code> 进行自动推送，通过预提交钩子 (pre-commit hook) 中的 <code>obsidian-export</code> 将 Vault 内容转换为 Hugo 的 <code>content/</code> 目录内容，并使用一个名为 <code>make-index-files</code> 的脚本来处理 Hugo 对嵌套内容的层级结构要求。</li>
+</ul>
+</li>
+<li><strong>优势</strong>: 构建速度极快，模板功能强大，社区庞大，主题丰富。</li>
+<li><strong>劣势&#x2F;注意事项</strong>: 与 Quartz 相比，需要更多的设置和工具（如 <code>obsidian-export</code> 或特定主题&#x2F;脚本）才能实现良好的 Obsidian 兼容性。在 Hugo 中处理嵌套内容层级需要 <code>_index.md</code> 文件 21。</li>
+</ul>
+</li>
+<li><p><strong>Zola</strong></p>
+<ul>
+<li><strong>概览</strong>: 一个快速的 SSG，以单个二进制文件形式提供，内置所有功能 27。</li>
+<li><strong>Obsidian 特性兼容性 (通过 <code>ppeetteerrs/obsidian-zola</code>)</strong>:<ul>
+<li><code>ppeetteerrs/obsidian-zola</code>: 被誉为“将您的 Obsidian 个人知识管理系统转换为 Zola 站点的简单解决方案” 13。它使用 <code>obsidian-export</code> 进行 Wikilink 解析 13。</li>
+<li><strong>Wikilinks</strong>: 通过 <code>obsidian-export</code> 支持 13。</li>
+<li><strong>嵌入</strong>: 非图片&#x2F;笔记嵌入（视频、音频、PDF）不受支持，会转换成链接。图片缩放不受支持 13。</li>
+<li><strong>Callouts</strong>: <code>ppeetteerrs/obsidian-zola</code> 未明确说明是否支持 Callouts 13。Obsidian 的原生 Callouts 4 可能需要自定义处理，否则可能无法按预期渲染。</li>
+<li><strong>标签</strong>: <code>ppeetteerrs/obsidian-zola</code> 未明确提及标签处理 13。Zola 支持分类法，如果标签被提取到 frontmatter 中，则可以使用。</li>
+<li><strong><code>ppeetteerrs/obsidian-zola</code> 支持的特性</strong>: 知识图谱（反向链接）、LaTeX (KaTeX)、部分字符串搜索、语法高亮、表格、复选框 13。</li>
+</ul>
+</li>
+<li><strong>安装与配置</strong>:<ul>
+<li>Zola 安装：28。</li>
+<li><code>ppeetteerrs/obsidian-zola</code> 安装涉及将 Obsidian Vault 设为 Git 仓库，配置 Netlify，并添加 <code>netlify.toml</code> 文件 13。也提供了本地测试的设置方法 13。</li>
+</ul>
+</li>
+<li><strong>优势</strong>: Zola 本身的简洁性（单个二进制文件），<code>ppeetteerrs/obsidian-zola</code> 旨在简化设置。</li>
+<li><strong>劣势&#x2F;注意事项</strong>: <code>ppeetteerrs/obsidian-zola</code> 在嵌入文件方面存在限制 13。Callout 支持情况不明。应检查 <code>ppeetteerrs/obsidian-zola</code> 的开发活动（例如 63 中提到的 issues #86, #85）以了解其当前状态。</li>
+</ul>
+</li>
+<li><p><strong>MkDocs (配合 Material 主题)</strong></p>
+<ul>
+<li><strong>概览</strong>: 一个面向项目文档的 SSG，使用 Python 构建。Material for MkDocs 主题非常流行且功能丰富 31。</li>
+<li><strong>Obsidian 特性兼容性 (通过 <code>ndy2/mkdocs-obsidian-support-plugin</code>)</strong>:<ul>
+<li><code>ndy2/mkdocs-obsidian-support-plugin</code>: 一个为 MkDocs Material 设计的插件，用于转换 Obsidian 语义 12。</li>
+<li><strong>Wikilinks &amp; 嵌入</strong>: 将 Obsidian Wikilink 图片转换为 MkDocs Material 的 mdlink 图片。将 Obsidian 嵌入的 PDF 转换为 HTML 嵌入的 PDF 12。对于通用的 Wikilinks，<code>mkdocs-ezlinks-plugin</code> 被提及为有用的辅助插件 12。</li>
+<li><strong>Callouts</strong>: 将 Obsidian Callout&#x2F;块状样式的 Admonition 转换为 MkDocs Material 的 Admonition 12。sondregronas 的 <code>mkdocs-callouts</code> 也被提及为有用的辅助插件 12。</li>
+<li><strong>标签</strong>: 为 MkDocs Material 搜索功能转换 Obsidian 标签 12。</li>
+</ul>
+</li>
+<li><strong>安装与配置</strong>:<ul>
+<li>安装 MkDocs 和 Material 主题。</li>
+<li>插件安装 (<code>pip install mkdocs-obsidian-support-plugin</code>) 并在 <code>mkdocs.yml</code> 中激活 12。某些功能需要额外的设置，详见插件文档 12。</li>
+<li>Daniel Nazarian 的解决方案 31 使用 MkDocs + Material 配合 GitHub Actions 来查找标记为 <code>#publish-me</code> 的文件，复制它们并部署到 GitHub Pages。然而，这些片段缺乏关于特定 Obsidian 语法处理的细节。</li>
+</ul>
+</li>
+<li><strong>优势</strong>: 如果博客偏向文档风格，其出色的文档特性会很有用；强大的 Material 主题；Python 生态系统。</li>
+<li><strong>劣势&#x2F;注意事项</strong>: 依赖插件来实现 Obsidian 兼容性。MkDocs 核心可能不像 Quartz 那样专注于“数字花园”概念。<code>ndy2/mkdocs-obsidian-support-plugin</code> 的文档站点 32 无法访问，这对于详细的功能设置是一个问题。</li>
+</ul>
+</li>
+<li><p><strong>其他 Obsidian 发布插件&#x2F;工具</strong>:</p>
+<ul>
+<li><strong>Enveloppe 33</strong>: 发布到 GitHub，可与 MkDocs, Jekyll, Hugo 集成。转换 Wikilinks，处理文件夹结构。</li>
+<li><strong>Webpage HTML Export 33</strong>: 将 Vault 导出为 HTML 文件，用于直接自托管。保持样式一致性，支持图谱视图、Dataview、Tasks。</li>
+<li><strong>Digital Garden Plugin 33</strong>: 与 GitHub 和 Vercel 集成。支持反向链接、嵌入、Dataview、图谱视图、主题。</li>
+<li><strong>O2 33</strong>: 为 Jekyll, Docusaurus 转换笔记。</li>
+<li><strong>Flowershow 27</strong>: “Obsidian 兼容”的 Markdown 发布工具。</li>
+</ul>
+</li>
+<li><p><strong>SSG 对比分析表</strong></p>
+<p>  下表总结了上述 SSG 及其 Obsidian 集成方案在关键特性上的支持情况，以辅助决策。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>特性类别</strong></td>
+<td><strong>SSG 与方案</strong></td>
+<td><strong>Wikilink 支持 (基础, 别名, 标题, 块, 最短路径)</strong></td>
+<td><strong>Callout 支持 (类型, 标题, 折叠)</strong></td>
+<td><strong>嵌入: 图片 (基础, 尺寸)</strong></td>
+<td><strong>嵌入: PDF (渲染? 链接? 播放器?)</strong></td>
+<td><strong>嵌入: 音频&#x2F;视频 (渲染? 链接? 播放器?)</strong></td>
+<td><strong>嵌入: 笔记 (引用?)</strong></td>
+<td><strong>标签支持 (行内, Frontmatter, 索引)</strong></td>
+<td><strong>Obsidian 设置复杂度</strong></td>
+<td><strong>构建性能</strong></td>
+<td><strong>定制级别</strong></td>
+<td><strong>社区&#x2F;生态</strong></td>
+</tr>
+<tr>
+<td><strong>Wikilinks</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td>✅ (全部)</td>
+<td>✅ (类型, 标题, 折叠)</td>
+<td>✅ (基础, 尺寸)</td>
+<td>✅ (渲染, HTML embed)</td>
+<td>✅ (渲染, HTML5 video&#x2F;audio)</td>
+<td>✅ (完整&#x2F;部分)</td>
+<td>✅ (全部, 索引页)</td>
+<td>低</td>
+<td>中</td>
+<td>高</td>
+<td>中</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td>△ (<code>obs-exp</code> 转md; <code>q-plus</code> 支持)</td>
+<td>△ (<code>q-plus</code> 支持 admonition)</td>
+<td>△ (依赖转换&#x2F;主题)</td>
+<td>△ (<code>q-plus</code> 支持)</td>
+<td>△ (<code>q-plus</code> 支持)</td>
+<td>△ (依赖转换)</td>
+<td>△ (Hugo原生强, 需解析)</td>
+<td>中-高</td>
+<td>高</td>
+<td>高</td>
+<td>大</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td>△ (<code>obs-exp</code> 转md)</td>
+<td>❓ (未明确)</td>
+<td>✅ (基础)</td>
+<td>❌ (转为链接)</td>
+<td>❌ (转为链接)</td>
+<td>△ (<code>obs-exp</code> 转md)</td>
+<td>❓ (Zola原生支持, 需解析)</td>
+<td>中</td>
+<td>高</td>
+<td>中</td>
+<td>小-中</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td>△ (图片wikilink; 通用需<code>ezlinks</code>)</td>
+<td>✅ (转为admonition)</td>
+<td>✅ (基础)</td>
+<td>✅ (HTML embed)</td>
+<td>❓ (未明确)</td>
+<td>❓ (未明确)</td>
+<td>✅ (用于搜索)</td>
+<td>中</td>
+<td>中</td>
+<td>高</td>
+<td>中-大</td>
+</tr>
+<tr>
+<td><strong>Callouts</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td></td>
+<td>✅ (原生)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td></td>
+<td>△ (<code>q-plus</code> 支持)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td></td>
+<td>❓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td></td>
+<td>✅ (<code>ndy2/plugin</code> 支持)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Embeds: Images</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td></td>
+<td></td>
+<td>✅ (尺寸支持)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td></td>
+<td></td>
+<td>✅ (依赖转换&#x2F;主题)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td></td>
+<td></td>
+<td>✅</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td></td>
+<td></td>
+<td>✅</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Embeds: PDF</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (渲染, HTML embed)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (<code>q-plus</code> 支持)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>❌ (转为链接)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (HTML embed)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Embeds: A&#x2F;V</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (渲染, HTML5)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (<code>q-plus</code> 支持)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>❌ (转为链接)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>❓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Embeds: Notes</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (完整&#x2F;部分)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (依赖转换)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (依赖转换)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>❓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><strong>Quartz v4</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (全部, 索引页)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hugo + <code>obsidian-export</code>&#x2F;<code>quartz-plus</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (Hugo原生强, 需解析)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Zola + <code>ppeetteerrs/obsidian-zola</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (Zola原生支持, 需解析)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>MkDocs + Material + <code>ndy2/plugin</code></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✅ (用于搜索)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*符号说明: ✅ = 良好支持/原生支持; △ = 部分支持/需配置/依赖外部工具; ❌ = 不支持/支持不佳; ❓ = 信息不足/未明确。*</span><br><span class="line"></span><br><span class="line">此表旨在提供一个概览。具体实现细节和最新支持情况，请务必查阅各工具的官方文档和社区资源。</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-实施指南：使用-Quartz-v4-构建您的博客"><a href="#3-实施指南：使用-Quartz-v4-构建您的博客" class="headerlink" title="3. 实施指南：使用 Quartz v4 构建您的博客"></a>3. 实施指南：使用 Quartz v4 构建您的博客</h2><p>基于其对 Obsidian 特性的强大原生支持，Quartz v4 成为构建个人博客系统的有力候选者。本章节将详细指导如何使用 Quartz v4 完成博客的搭建与配置。</p>
+<h3 id="3-1-为何选择-Quartz-v4"><a href="#3-1-为何选择-Quartz-v4" class="headerlink" title="3.1. 为何选择 Quartz v4"></a>3.1. 为何选择 Quartz v4</h3><p>Quartz v4 之所以备受推崇，主要在于其设计理念紧密贴合 Obsidian 用户需求 1。它为 Wikilinks、Callouts 以及多种类型的嵌入内容提供了开箱即用的支持，这在第二章节的分析中已详细阐述 1。这种“为 Obsidian 而生”的特性，大大降低了从笔记到博客的转换成本和技术门槛。</p>
+<p>然而，需要特别注意的是 Quartz 的一个特性：<strong>所有非 Markdown 文件（包括图片、PDF、音视频等附件）在构建后都会被默认发布到公共目录</strong> 7。这意味着，即使用户将某篇包含私人附件的笔记标记为草稿 (<code>draft: true</code>)，或者使用 <code>ExplicitPublish</code> 插件仅发布特定笔记，这些附件本身依然可能通过直接链接被访问。这对于注重隐私的用户而言是一个必须严肃对待的潜在风险。解决方案在于精细管理内容组织和 Quartz 的 <code>ignorePatterns</code> 配置。用户应确保不希望公开的附件不被 Quartz扫描到，或通过 <code>ignorePatterns</code> 明确排除包含这些附件的文件夹。</p>
+<h3 id="3-2-前置条件与安装"><a href="#3-2-前置条件与安装" class="headerlink" title="3.2. 前置条件与安装"></a>3.2. 前置条件与安装</h3><ul>
+<li><strong>Node.js 与 npm</strong>: 确保系统中已安装 Node.js (版本至少为 v20) 及其包管理器 npm 11。</li>
+<li><strong>Git</strong>: 安装 Git 版本控制系统 14。</li>
+<li><strong>Quartz 安装步骤</strong>:<ol>
+<li>打开终端，执行 <code>git clone https://github.com/jackyzha0/quartz.git</code> 克隆 Quartz 仓库 11。</li>
+<li>进入克隆的目录: <code>cd quartz</code> 11。</li>
+<li>安装依赖: <code>npm i</code> 11。</li>
+<li>初始化 Quartz 站点: <code>npx quartz create</code>。此命令会引导用户完成初始化，包括指定 Obsidian Vault 的路径，从而将笔记内容与 Quartz 项目关联起来 11。</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-3-目录结构与核心配置-quartz-config-ts"><a href="#3-3-目录结构与核心配置-quartz-config-ts" class="headerlink" title="3.3. 目录结构与核心配置 (quartz.config.ts)"></a>3.3. 目录结构与核心配置 (<code>quartz.config.ts</code>)</h3><ul>
+<li><strong>项目结构</strong>: 一个典型的 Quartz 项目包含 <code>content/</code> 目录（用于存放或链接 Obsidian 笔记）、<code>quartz/</code> 目录（Quartz 系统文件）、核心配置文件 <code>quartz.config.ts</code> 以及 <code>package.json</code> 等。</li>
+<li><strong><code>quartz.config.ts</code> 详解</strong> 16:<ul>
+<li><code>configuration</code>: 包含站点标题 (<code>pageTitle</code>)、是否启用单页应用模式 (<code>enableSPA</code>)、是否启用链接悬浮预览 (<code>enablePopovers</code>)、主题设置 (<code>theme</code>，包括颜色、字体等，可使用 Google Fonts)、站点基础 URL (<code>baseUrl</code>) 以及内容忽略规则 (<code>ignorePatterns</code>)。</li>
+<li><code>plugins</code>: 定义了 <code>transformers</code> (内容转换)、<code>filters</code> (内容过滤) 和 <code>emitters</code> (内容聚合输出，如 RSS) 的插件链。</li>
+</ul>
+</li>
+<li><strong>连接您的 Obsidian Vault</strong>:<ul>
+<li><strong>策略一 (直接指向)</strong>: 将 Quartz 的 <code>content</code> 目录直接指向您的 Obsidian Vault 或其子文件夹 2。<ul>
+<li><em>优点</em>: 最简单，编辑即同步。</li>
+<li><em>缺点</em>: 整个 Vault 都可能被处理，除非使用 <code>ignorePatterns</code> 或 <code>ExplicitPublish</code> 过滤器。</li>
+</ul>
+</li>
+<li><strong>策略二 (选择性复制)</strong>: 使用脚本（如 15 中基于 GitHub Actions 的方案，或本地脚本）将选定的笔记从主 Vault 复制到 Quartz 的 <code>content</code> 目录。<ul>
+<li><code>obsidian-quartz-publish</code> 工具 35 可以自动化此过程：在 Obsidian 中为笔记添加 <code>#publish</code> 标签，然后运行该工具将这些笔记及其嵌入文件复制到 Quartz 的 <code>content</code> 目录。这种方式为拥有大量混合公开和私密笔记的用户提供了一种更为流畅、以 Obsidian 为中心的发布管理方式，无需重构整个 Vault 或为大量笔记逐一管理 frontmatter。它通过预先筛选内容来辅助 Quartz 的后续处理。</li>
+<li><em>优点</em>: 更精确地控制发布内容，主 Vault 保持独立。</li>
+<li><em>缺点</em>: 工作流中增加了一个步骤。</li>
+</ul>
+</li>
+<li><strong>使用 <code>ExplicitPublish()</code> 过滤器</strong>: 在希望发布的笔记的 frontmatter 中添加 <code>publish: true</code> 2。</li>
+<li><strong>关于 <code>ignorePatterns</code> 和 <code>ExplicitPublish</code> 的安全提示 7</strong>: 再次强调，“无论使用何种过滤器插件，所有非 Markdown 文件（如图片、录音、PDF 等）都会在最终构建中被输出并公开可用。” 用户必须通过 <code>ignorePatterns</code> (例如 <code>ignorePatterns: [&quot;**/private_attachments&quot;, &quot;secret_folder&quot;]</code>) 来排除不应公开的附件文件夹 7。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-Obsidian-特有语法在-Quartz-中的转换与呈现"><a href="#3-4-Obsidian-特有语法在-Quartz-中的转换与呈现" class="headerlink" title="3.4. Obsidian 特有语法在 Quartz 中的转换与呈现"></a>3.4. Obsidian 特有语法在 Quartz 中的转换与呈现</h3><ul>
+<li><strong>Wikilinks</strong>:<ul>
+<li>由 <code>ObsidianFlavoredMarkdown</code> 插件默认启用 6。</li>
+<li>由 <code>CrawlLinks</code> 插件解析 3。</li>
+<li>在 <code>quartz.config.ts</code> 中为 <code>CrawlLinks</code> 配置 <code>markdownLinkResolution: &#39;shortest&#39;</code> 以实现类似 Obsidian 的行为 15。</li>
+<li>支持的语法包括: <code>[[文件]]</code>, <code>[[文件|别名]]</code>, <code>[[文件#标题]]</code>, <code>[[文件#^blockID]]</code> 3。</li>
+</ul>
+</li>
+<li><strong>Callouts</strong>:<ul>
+<li>由 <code>ObsidianFlavoredMarkdown</code> 插件启用 6。</li>
+<li>语法: <code>&gt;[!info] 标题</code>, <code>&gt;[!tip]- 可折叠提示</code> 1。</li>
+<li>样式基于 Quartz 主题，可通过自定义 CSS 修改 1。Obsidian 的原生 Callout 类型 4 通常能正常工作。</li>
+</ul>
+</li>
+<li><strong>Embeds (嵌入内容)</strong>:<ul>
+<li><strong>图片</strong>: <code>![[image.png]]</code>, <code>![[image.png|100x145]]</code> (用于指定尺寸) 3。</li>
+<li><strong>PDF、音频、视频</strong>:<ul>
+<li><code>ObsidianFlavoredMarkdown</code> 插件默认 <code>enableVideoEmbed: true</code> 6。</li>
+<li>Quartz v4 源码中的 <code>roam.ts</code> 转换器将 <code>videoComponent</code>, <code>audioComponent</code>, <code>pdfComponent</code> 选项默认为 true 8。</li>
+<li>这强烈暗示 <code>![[MyFile.pdf]]</code>, <code>![[MyFile.mp3]]</code>, <code>![[MyFile.mp4]]</code> 语法可以用于嵌入这些文件。输出很可能是标准的 HTML5 <code>&lt;embed&gt;</code>, <code>&lt;audio&gt;</code>, 或 <code>&lt;video&gt;</code> 标签。</li>
+<li><em>验证提示</em>: 具体 HTML 输出或播放器 UI 未在现有资料中详述，用户可能需要检查生成的 HTML 或查阅 Quartz 文档以获取自定义选项。</li>
+</ul>
+</li>
+<li><strong>笔记 (引用&#x2F;Transclusion)</strong>: <code>![[另一笔记]]</code> (嵌入整个笔记), <code>![[另一笔记#标题]]</code> (嵌入标题下的段落), <code>![[另一笔记#^blockID]]</code> (嵌入特定块) 3。</li>
+<li><strong>YouTube 嵌入</strong>: <code>ObsidianFlavoredMarkdown</code> 插件默认 <code>enableYouTubeEmbed: true</code> 6。这可能使用类似 64 中提到的 <code>![youtube 链接]</code> 语法。</li>
+</ul>
+</li>
+<li><strong>Tags (标签)</strong>:<ul>
+<li><code>ObsidianFlavoredMarkdown</code> 插件的 <code>parseTags: true</code> 选项会解析并链接标签 6。</li>
+<li>Frontmatter 中的标签 (<code>tags: [example-tag]</code>) 也受支持，用于页面元数据 2。</li>
+<li>Quartz 会生成标签列表页面 2。</li>
+</ul>
+</li>
+<li><strong>其他 OFM 特性</strong> 6: 注释 <code>%%comment%%</code>, 高亮 <code>==text==</code>, Mermaid 图表, 箭头解析 <code>-&gt;</code>, 块引用。</li>
+</ul>
+<h3 id="3-5-主题选择与基础定制"><a href="#3-5-主题选择与基础定制" class="headerlink" title="3.5. 主题选择与基础定制"></a>3.5. 主题选择与基础定制</h3><ul>
+<li>Quartz v4 支持主题功能。Emile Bangma 已将一些流行的 Obsidian 主题移植到了 Quartz 1。</li>
+<li>主题相关的配置在 <code>quartz.config.ts</code> 的 <code>theme: &#123; typography: &#123;&#125;, colors: &#123;&#125; &#125;</code> 部分进行，可以定义字体 (支持 Google Fonts) 和颜色方案 16。</li>
+<li>用户可以通过添加自定义 CSS 来进一步调整站点外观。虽然有资料提及直接修改 Quartz 源码以应用 CSS 18，但通常应有更简洁的自定义 CSS 引入方式。</li>
+</ul>
+<h3 id="3-6-本地开发：构建与预览"><a href="#3-6-本地开发：构建与预览" class="headerlink" title="3.6. 本地开发：构建与预览"></a>3.6. 本地开发：构建与预览</h3><ul>
+<li>构建并本地预览站点的命令: <code>npx quartz build --serve</code> 14。默认服务端口为 8080。</li>
+<li>当源文件发生更改时，本地预览会自动更新 14。</li>
+<li>仅构建用于部署的静态文件: <code>npx quartz build</code> 18。</li>
+</ul>
+<h3 id="3-7-高级定制-简述"><a href="#3-7-高级定制-简述" class="headerlink" title="3.7. 高级定制 (简述)"></a>3.7. 高级定制 (简述)</h3><p>Quartz 允许通过编写自定义组件和插件来进行更深层次的修改，以满足特定的高级需求 15。</p>
+<h2 id="4-将您的博客推向世界：部署与远程访问"><a href="#4-将您的博客推向世界：部署与远程访问" class="headerlink" title="4. 将您的博客推向世界：部署与远程访问"></a>4. 将您的博客推向世界：部署与远程访问</h2><p>一旦博客内容通过 Quartz v4 构建完成，下一步就是将其部署到互联网，以便他人可以远程访问。本节将探讨几种主流的部署策略。</p>
+<h3 id="4-1-静态站点托管策略概览"><a href="#4-1-静态站点托管策略概览" class="headerlink" title="4.1. 静态站点托管策略概览"></a>4.1. 静态站点托管策略概览</h3><p>由 Quartz 等 SSG 生成的静态站点本质上是一系列 HTML、CSS 和 JavaScript 文件。它们可以托管在几乎任何类型的 Web 服务器上。主要的托管方式包括：</p>
+<ul>
+<li><strong>静态托管平台</strong>: 如 GitHub Pages, Netlify, Vercel。</li>
+<li><strong>VPS (虚拟专用服务器)</strong>: 如 DigitalOcean, Linode, AWS EC2。</li>
+<li><strong>自建服务器 (家庭&#x2F;办公室)</strong>: 利用个人硬件设备。</li>
+</ul>
+<h3 id="4-2-方案-A：简化托管-GitHub-Pages-Netlify-Vercel"><a href="#4-2-方案-A：简化托管-GitHub-Pages-Netlify-Vercel" class="headerlink" title="4.2. 方案 A：简化托管 (GitHub Pages, Netlify, Vercel)"></a>4.2. 方案 A：简化托管 (GitHub Pages, Netlify, Vercel)</h3><ul>
+<li><strong>流程</strong>:<ol>
+<li>将您的 SSG 项目（包含 Quartz 源码而非仅仅是 <code>public</code> 输出目录）推送到 GitHub 或 GitLab 仓库。</li>
+<li>将该仓库连接到所选平台（如 Netlify, Vercel, GitHub Pages）。</li>
+<li>在平台上配置构建设置，例如指定 SSG 构建命令 (<code>npx quartz build</code>) 和输出目录 (<code>public</code>)。</li>
+<li>平台会在每次代码推送到仓库时自动构建和部署。</li>
+</ol>
+</li>
+<li><strong>GitHub Pages</strong>:<ul>
+<li>对于公共仓库是免费且易于使用的方案 [14 (Quartz), 21 (Hugo)]。</li>
+<li>14 提供了一个用于将 Quartz 部署到 GitHub Pages 的 <code>deploy.yml</code> GitHub Actions 工作流。</li>
+</ul>
+</li>
+<li><strong>Netlify&#x2F;Vercel</strong>:<ul>
+<li>通常比 GitHub Pages 提供更多功能，如更优的分支预览、无服务器函数、分析工具以及免费套餐中更多的构建时长 13。</li>
+<li>15 详细介绍了如何使用 Vercel 和 GitHub Actions 实现 Quartz 的自动化部署工作流。</li>
+</ul>
+</li>
+<li><strong>优点</strong>: 个人使用通常免费，内置 CI&#x2F;CD，全球 CDN 加速，自动处理 HTTPS。</li>
+<li><strong>缺点</strong>: 对服务器环境的控制较少，免费套餐可能存在限制（如构建时间、带宽）。</li>
+</ul>
+<h3 id="4-3-方案-B：完全控制-VPS-或家庭服务器自托管"><a href="#4-3-方案-B：完全控制-VPS-或家庭服务器自托管" class="headerlink" title="4.3. 方案 B：完全控制 - VPS 或家庭服务器自托管"></a>4.3. 方案 B：完全控制 - VPS 或家庭服务器自托管</h3><ul>
+<li><strong>VPS (虚拟专用服务器)</strong>: 从 DigitalOcean, Linode, AWS EC2 等提供商处租用虚拟服务器。<ul>
+<li><em>初始服务器设置</em>: 安装操作系统（推荐 Linux，如 Ubuntu），配置 Web 服务器软件（如 Nginx 或 Apache）。</li>
+</ul>
+</li>
+<li><strong>家庭服务器</strong>: 使用家中的专用计算机（如树莓派、旧 PC）。<ul>
+<li><em>注意事项</em>: 功耗、网络稳定性、ISP 服务条款（部分 ISP 可能禁止家庭网络托管）。</li>
+</ul>
+</li>
+<li><strong>Web 服务器软件</strong>:<ul>
+<li>Nginx 因其高性能和高效率，是托管静态站点的热门选择。Apache 也是一个选项。</li>
+<li>需要配置 Nginx 以从 SSG 的输出目录（例如 <code>/var/www/myblog</code>）提供静态文件。</li>
+</ul>
+</li>
+<li><strong>家庭服务器的网络访问</strong>:<ul>
+<li><strong>端口转发</strong>:<ul>
+<li><em>概念</em>: 配置家庭路由器，将特定端口（如 HTTP 的 80 端口，HTTPS 的 443 端口）的入站流量转发到家庭服务器的内部 IP 地址 36。</li>
+<li><em>操作步骤</em>: 根据 36 的通用指南：登录路由器，找到端口转发设置，指定端口、协议 (TCP) 和服务器的本地 IP。</li>
+<li><em>安全警告</em>: 38 正确地指出了开放端口会直接暴露家庭网络。务必强调此风险。</li>
+</ul>
+</li>
+<li><strong>动态 DNS (DDNS) 服务</strong>:<ul>
+<li><em>问题</em>: 家庭互联网连接通常使用动态 IP 地址，该地址会发生变化。</li>
+<li><em>解决方案</em>: DDNS 服务将一个选定的主机名（如 <code>myblog.ddns.net</code>）映射到您不断变化的 IP 地址。服务器上的客户端会在 IP 更改时通知 DDNS 提供商。</li>
+<li><em>提供商</em>:<ul>
+<li>免费: No-IP 39, Dynu 39, DuckDNS 39, Afraid.org 39。ClouDNS 也提供免费套餐 40。</li>
+<li>付费: Dyn (Oracle) 39, EasyDNS 39, DNSMadeEasy 39。ClouDNS 也有付费套餐 40。</li>
+</ul>
+</li>
+<li><em>设置</em>: 注册 DDNS 服务，创建主机名，在服务器上安装其更新客户端，或在路由器中配置（如果支持）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>优点</strong>: 最大程度的控制权，可以托管其他服务。</li>
+<li><strong>缺点</strong>: 设置和维护工作量较大，需自行负责安全、更新、备份。ISP 限制或动态 IP 可能成为家庭服务器的障碍。</li>
+</ul>
+<h3 id="4-4-方案-C：本地服务器的安全隧道技术-Ngrok-Cloudflare-Tunnel-FRP"><a href="#4-4-方案-C：本地服务器的安全隧道技术-Ngrok-Cloudflare-Tunnel-FRP" class="headerlink" title="4.4. 方案 C：本地服务器的安全隧道技术 (Ngrok, Cloudflare Tunnel, FRP)"></a>4.4. 方案 C：本地服务器的安全隧道技术 (Ngrok, Cloudflare Tunnel, FRP)</h3><ul>
+<li><strong>隧道技术简介</strong>:<ul>
+<li><em>概念</em>: 从本地服务器创建一个到隧道服务提供商公共端点的安全出站连接。这避免了在防火墙上打开入站端口，并且在许多情况下无需处理 DDNS。</li>
+<li><em>流量走向</em>: 用户 -&gt; 隧道服务公共 URL -&gt; 隧道服务 -&gt; 本地服务器上的隧道客户端 -&gt; 本地 Web 服务器。</li>
+</ul>
+</li>
+<li><strong>隧道服务对比：Ngrok vs. Cloudflare Tunnel vs. FRP</strong> 41<ul>
+<li><strong>Ngrok</strong> 41:<ul>
+<li><em>特性</em>: 设置简单，提供公共 URL (HTTP&#x2F;HTTPS&#x2F;TCP)，Web UI 用于流量检查，付费版支持基本认证。免费版使用随机子域名，有带宽限制 41。</li>
+<li><em>优点</em>: 非常适合快速共享和演示。</li>
+<li><em>缺点</em>: 免费版限制较多（随机 URL，1GB 带宽上限，禁止商业用途），自定义域名需付费 41。</li>
+</ul>
+</li>
+<li><strong>Cloudflare Tunnel (Argo Tunnel &#x2F; <code>cloudflared</code>)</strong> 43:<ul>
+<li><em>特性</em>: 利用 Cloudflare 的庞大网络，轻量级 <code>cloudflared</code> 客户端，仅出站连接，DDoS 防护，日志记录，可与 Cloudflare Access 集成实现访问策略。个人使用免费 43。</li>
+<li><em>优点</em>: 安全性强，可使用自有域名（通过 Cloudflare DNS），免费套餐对个人站点非常友好，性能优异。</li>
+<li><em>缺点</em>: 自定义域名需使用 Cloudflare DNS。设置可能比 Ngrok 复杂 43。</li>
+</ul>
+</li>
+<li><strong>FRP (Fast Reverse Proxy)</strong> 42:<ul>
+<li><em>特性</em>: 开源，可自行托管服务端 (<code>frps</code>) 和客户端 (<code>frpc</code>)。支持 HTTP&#x2F;HTTPS&#x2F;TCP&#x2F;UDP，令牌认证，TLS。提供监控仪表盘 47。</li>
+<li><em>优点</em>: 完全控制权（如果自托管 <code>frps</code>），除 <code>frps</code> 所在的 VPS 外无第三方依赖，功能多样。</li>
+<li><em>缺点</em>: 需要一台 VPS 运行 <code>frps</code>（如果没有则增加成本&#x2F;复杂性）。需自行管理 <code>frps</code> 的安全。</li>
+</ul>
+</li>
+<li><em>建议</em>: 对于持久、安全且使用自有域名的免费方案，Cloudflare Tunnel 通常是最佳平衡点。如果愿意管理 <code>frps</code>，FRP 则提供了完全的控制权。Ngrok 最适合临时共享。</li>
+</ul>
+</li>
+<li><strong>推荐隧道服务设置指南 (以 Cloudflare Tunnel 为例)</strong>:<ul>
+<li>基于 46:<ol>
+<li>拥有 Cloudflare 账户并将域名添加到 Cloudflare。</li>
+<li>在服务器上安装 <code>cloudflared</code>。</li>
+<li>执行 <code>cloudflared tunnel login</code>。</li>
+<li>执行 <code>cloudflared tunnel create my-blog-tunnel</code> 创建隧道。</li>
+<li>创建 <code>config.yml</code> 文件，将隧道 UUID 指向本地 Web 服务器（例如，如果 Quartz 运行在 8080 端口，则为 <code>http://localhost:8080</code>）。</li>
+<li>执行 <code>cloudflared tunnel route dns my-blog-tunnel blog.yourdomain.com</code> 为隧道配置 DNS 记录。</li>
+<li>执行 <code>cloudflared tunnel run my-blog-tunnel</code> 运行隧道（或将其作为服务运行）。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>对于在家中自托管服务器的用户而言，隧道服务（尤其是 Cloudflare Tunnel，因其免费套餐和丰富功能）相较于传统的端口转发加 DDNS 方案，通常是更安全且更简便的选择。端口转发直接暴露家庭网络端口 38，而 DDNS 则用于应对动态 IP 问题 39。隧道服务通过建立从本地服务器到服务商公共端点的出站连接来工作 43，无需在用户路由器上开放入站端口。这种仅出站的模式通常更安全，因为它不会将本地网络直接暴露给未经请求的互联网流量。此外，像 Cloudflare Tunnel 这样的服务还提供了 DDoS 防护和 CDN 等附加优势，这些是简单的家庭服务器设置难以实现的。这实际上是将公共访问的端点转移到了一个经过加固的提供商网络上。</p>
+<ul>
+<li><p><strong>远程访问方法对比表</strong></p>
+<p>  下表对不同的远程访问方法进行了比较，以帮助用户根据自身情况做出选择。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>方法</strong></td>
+<td><strong>一般成本</strong></td>
+<td><strong>设置复杂度</strong></td>
+<td><strong>维护开销</strong></td>
+<td><strong>安全责任</strong></td>
+<td><strong>控制级别</strong></td>
+<td><strong>主要优点</strong></td>
+<td><strong>主要缺点</strong></td>
+</tr>
+<tr>
+<td>静态托管平台 (Netlify&#x2F;Vercel&#x2F;GH Pages)</td>
+<td>免费&#x2F;低</td>
+<td>低</td>
+<td>低</td>
+<td>平台</td>
+<td>低</td>
+<td>易用, CI&#x2F;CD, CDN, 自动HTTPS</td>
+<td>控制少, 免费版有局限</td>
+</tr>
+<tr>
+<td>VPS 托管</td>
+<td>中 (VPS月费)</td>
+<td>中</td>
+<td>中</td>
+<td>用户</td>
+<td>高</td>
+<td>完全控制, 可托管其他服务</td>
+<td>设置维护复杂, 需自行负责安全</td>
+</tr>
+<tr>
+<td>家庭服务器 + 端口转发 + DDNS</td>
+<td>低 (硬件, 电费, 可能的DDNS费)</td>
+<td>高</td>
+<td>中-高</td>
+<td>用户</td>
+<td>完全</td>
+<td>完全控制, 利用现有硬件</td>
+<td>安全风险高, ISP限制, 动态IP麻烦</td>
+</tr>
+<tr>
+<td>家庭服务器 + Cloudflare Tunnel</td>
+<td>低 (硬件, 电费, Cloudflare免费套餐可用)</td>
+<td>中</td>
+<td>中</td>
+<td>用户&#x2F;Cloudflare (共享)</td>
+<td>中-高</td>
+<td>安全性较高 (无入站端口), DDoS防护, 自有域名, 免费套餐功能强大</td>
+<td>依赖Cloudflare, 域名需用其DNS</td>
+</tr>
+<tr>
+<td>家庭服务器 + 自托管 FRP</td>
+<td>中 (硬件, 电费, <code>frps</code> VPS费)</td>
+<td>高</td>
+<td>高</td>
+<td>用户</td>
+<td>完全</td>
+<td>完全控制, 开源灵活</td>
+<td>需额外VPS运行<code>frps</code>, 自行负责<code>frps</code>安全</td>
+</tr>
+<tr>
+<td>家庭服务器 + Ngrok</td>
+<td>免费&#x2F;付费 (取决于套餐)</td>
+<td>低</td>
+<td>低</td>
+<td>用户&#x2F;Ngrok (共享)</td>
+<td>低-中</td>
+<td>设置极简, 快速共享</td>
+<td>免费版限制多 (随机URL, 带宽), 付费版成本较高, 主要用于临时访问</td>
+</tr>
+</tbody></table>
+<h2 id="5-加固您的堡垒：自托管博客的基础安全防护"><a href="#5-加固您的堡垒：自托管博客的基础安全防护" class="headerlink" title="5. 加固您的堡垒：自托管博客的基础安全防护"></a>5. 加固您的堡垒：自托管博客的基础安全防护</h2><p>对于选择自托管方案（如 VPS、家庭服务器，或使用隧道技术但仍需保护本地服务器）的用户而言，实施必要的安全措施至关重要。静态托管平台通常会处理大部分底层安全问题。</p>
+<h3 id="5-1-自托管应用的基本安全原则"><a href="#5-1-自托管应用的基本安全原则" class="headerlink" title="5.1. 自托管应用的基本安全原则"></a>5.1. 自托管应用的基本安全原则</h3><ul>
+<li><strong>最小权限原则</strong>: 确保运行服务的用户和进程仅拥有其执行任务所必需的权限。</li>
+<li><strong>定期软件更新</strong>: 及时更新操作系统、Web 服务器软件、SSG 及其依赖项，以修补已知漏洞 50。</li>
+<li><strong>强密码策略</strong>: 为所有账户（服务器、管理面板等）使用强大且唯一的密码。强烈建议为服务器 SSH 访问配置密钥认证 51。</li>
+<li><strong>定期数据备份</strong>: 遵循 3-2-1 备份规则（3 份副本，2 种不同介质，1 份异地存储）以防数据丢失 51。</li>
+</ul>
+<h3 id="5-2-实现-HTTPS：保障数据传输安全"><a href="#5-2-实现-HTTPS：保障数据传输安全" class="headerlink" title="5.2. 实现 HTTPS：保障数据传输安全"></a>5.2. 实现 HTTPS：保障数据传输安全</h3><ul>
+<li><strong>HTTPS 的重要性</strong>: HTTPS 通过加密服务器与客户端之间的通信，保护数据完整性和隐私，防止中间人攻击，并有助于建立用户信任（浏览器地址栏的锁形图标）52。</li>
+<li><strong>Let’s Encrypt</strong>: 一个免费、自动化、开放的证书颁发机构 (CA)，使获取和部署 SSL&#x2F;TLS 证书变得简单 52。</li>
+<li><strong>使用 Certbot 获取证书</strong>:<ul>
+<li>Certbot 是一个用于自动执行 Let’s Encrypt 证书申请、配置和续期的工具 53。</li>
+<li><strong>验证方式 (Challenge Types)</strong>:<ul>
+<li>HTTP-01: Certbot 在您的 Web 服务器上放置一个验证文件。这要求服务器的 80 端口能够从公网访问（或者由反向代理处理验证请求）55。</li>
+<li>DNS-01: Certbot 在您域名的 DNS 记录中添加一个 TXT 记录。此方式不要求服务器的 80 端口对外开放，适用于通配符证书或内部服务器 53。</li>
+</ul>
+</li>
+<li><strong>为公网可访问服务器配置 (VPS 或已配置端口转发的家庭服务器)</strong>:<ul>
+<li>安装 Certbot 及其适用于您的 Web 服务器的插件（例如 <code>python3-certbot-nginx</code>）。</li>
+<li>运行 <code>sudo certbot --nginx</code> (Nginx) 或 <code>sudo certbot --apache</code> (Apache)。Certbot 会自动配置 Web 服务器并设置证书自动续期 54。</li>
+</ul>
+</li>
+<li><strong>为隧道连接的服务器配置 (入站访问被阻止)</strong>:<ul>
+<li>如果使用 Cloudflare Tunnel 且 Cloudflare 管理 DNS，Cloudflare 通常会自动处理公共端点的 SSL。如果 <code>cloudflared</code> 客户端与本地 Web 服务器不在同一台机器上，可能仍需在它们之间使用自签名证书以实现端到端加密。</li>
+<li>如果使用 FRP 或 Ngrok 并配置了自定义域名，通常需要使用 DNS-01 验证。Certbot 客户端需要通过 API 访问您的 DNS 提供商以自动创建 TXT 记录。53 详细介绍了如何使用 DuckDNS 进行此操作。</li>
+<li>54 也描述了如何为暴露到互联网的 <code>code-server</code>（通过 Caddy 或 NGINX）使用 Let’s Encrypt，这要求有 A 记录指向该实例。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>自签名证书 (仅用于本地&#x2F;内部加密)</strong>:<ul>
+<li>可用于加密反向代理（如 <code>cloudflared</code> 客户端）与本地 Web 服务之间的流量（如果它们位于本地网络中的不同机器上）52。</li>
+<li>浏览器会显示警告，除非导入自签名 CA。不适合直接用于面向公众的站点。</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-防火墙配置：在-Linux-上使用-UFW"><a href="#5-3-防火墙配置：在-Linux-上使用-UFW" class="headerlink" title="5.3. 防火墙配置：在 Linux 上使用 UFW"></a>5.3. 防火墙配置：在 Linux 上使用 UFW</h3><ul>
+<li><strong>目的</strong>: 控制进出服务器的网络流量 51。</li>
+<li><strong>UFW 基础</strong>: UFW (Uncomplicated Firewall) 是 <code>iptables</code> 的一个用户友好型接口 56。</li>
+<li><strong>安装</strong>: <code>sudo apt install ufw</code> (如果尚未安装) 56。</li>
+<li><strong>默认策略</strong>:<ul>
+<li><code>sudo ufw default deny incoming</code> (默认拒绝所有入站连接 - 至关重要) 57。</li>
+<li><code>sudo ufw default allow outgoing</code> (默认允许所有出站连接 - 常见做法，但可进一步限制) 57。</li>
+</ul>
+</li>
+<li><strong>允许必要服务</strong>:<ul>
+<li>SSH: <code>sudo ufw allow ssh</code> (或自定义 SSH 端口，如 <code>sudo ufw allow 2222/tcp</code>) 56。<em>如果远程管理服务器，此规则必须在启用 UFW 之前设置。</em></li>
+<li>HTTP: <code>sudo ufw allow http</code> 或 <code>sudo ufw allow 80/tcp</code> 56。</li>
+<li>HTTPS: <code>sudo ufw allow https</code> 或 <code>sudo ufw allow 443/tcp</code> 56。</li>
+</ul>
+</li>
+<li><strong>启用 UFW</strong>: <code>sudo ufw enable</code> 56。</li>
+<li><strong>检查状态</strong>: <code>sudo ufw status verbose</code> 56。</li>
+<li><strong>IPv6 支持</strong>: 确保 <code>/etc/default/ufw</code> 文件中的 <code>IPV6=yes</code> 58。</li>
+</ul>
+<h3 id="5-4-入侵防御：设置-Fail2ban"><a href="#5-4-入侵防御：设置-Fail2ban" class="headerlink" title="5.4. 入侵防御：设置 Fail2ban"></a>5.4. 入侵防御：设置 Fail2ban</h3><ul>
+<li><strong>目的</strong>: Fail2ban 监控日志文件中的可疑活动（如重复的登录失败尝试），并使用防火墙规则临时或永久封禁来源 IP 地址 59。</li>
+<li><strong>安装</strong>: <code>sudo apt install fail2ban</code> 59。</li>
+<li><strong>配置</strong>:<ul>
+<li>复制 <code>jail.conf</code> 到 <code>jail.local</code>: <code>sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local</code>。编辑 <code>jail.local</code> 文件 60。</li>
+<li><code>jail.local</code> 中的 &#96;&#96; 部分:<ul>
+<li><code>ignoreip</code>: 白名单设置，填写您自己的 IP 地址 61。</li>
+<li><code>bantime</code>: 封禁时长。</li>
+<li><code>findtime</code>: 计算重试次数的时间窗口。</li>
+<li><code>maxretry</code>: 封禁前的失败尝试次数 60。</li>
+</ul>
+</li>
+<li><strong>为服务启用 Jails (监狱)</strong>:<ul>
+<li>SSH (<code>[sshd]</code>): 通常默认启用。检查 <code>logpath = /var/log/auth.log</code> 60。</li>
+<li>Web 服务器 (Nginx&#x2F;Apache): 创建或启用针对 Web 服务器日志的 Jails，以防护登录页面的暴力破解、漏洞扫描等（例如 <code>[nginx-http-auth]</code>, <code>[apache-badbots]</code>）。需要配置合适的过滤器 (<code>filter =...</code>) 和日志路径 (<code>logpath =...</code>) 60。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>启动并启用 Fail2ban</strong>: <code>sudo systemctl enable fail2ban</code>, <code>sudo systemctl start fail2ban</code> 59。</li>
+<li><strong>检查状态</strong>: <code>sudo fail2ban-client status</code>, <code>sudo fail2ban-client status &lt;jailname&gt;</code> 60。</li>
+</ul>
+<h3 id="5-5-定期软件更新与数据备份的重要性-重申"><a href="#5-5-定期软件更新与数据备份的重要性-重申" class="headerlink" title="5.5. 定期软件更新与数据备份的重要性 (重申)"></a>5.5. 定期软件更新与数据备份的重要性 (重申)</h3><ul>
+<li>软件更新能够修补已知的安全漏洞 50。</li>
+<li>数据备份能够在硬件故障、数据损坏或安全事件发生时保护数据免遭丢失 50。</li>
+</ul>
+<p>对于自托管的公共服务而言，分层安全策略是不可或缺的。将任何服务暴露于互联网，尤其是从家庭服务器或自管理 VPS 暴露服务，都会引入风险。没有任何单一的安全措施是万无一失的。例如，HTTPS 加密数据传输，但不能阻止暴力破解攻击；防火墙阻止不需要的端口访问，但不能保护允许的服务免受攻击。每一项安全措施都针对不同类型的威胁：HTTPS 保护传输中的数据并确保服务器的真实性；防火墙 (UFW) 进行网络级访问控制；Fail2ban 提供应用级防御，阻止表现出恶意行为（如暴力破解）的 IP；隧道技术（如 Cloudflare Tunnel）可以提供 DDoS 缓解、隐藏源 IP 并在边缘强制执行访问策略；定期更新修补软件漏洞；备份则确保在发生安全事故或故障时能够恢复数据。这些措施协同工作，共同构建一个更具弹性的安全态势。攻击者需要绕过多层防御才能得逞。因此，用户必须实施多层次的安全策略，仅仅搭建并暴露博客是不足够且危险的。</p>
+<p>此外，安全配置的细节也取决于所选择的部署方法。如果使用静态托管平台（如 Netlify、Vercel），平台会处理大部分基础设施安全（DDoS 防护、边缘 HTTPS、服务器补丁）。用户的主要责任是保护其 Git 仓库和平台账户。如果使用 VPS，用户则需要负责操作系统加固、防火墙 (UFW)、入侵检测 (Fail2ban)、Web 服务器安全以及 HTTPS 证书管理 (Let’s Encrypt)。如果使用带端口转发的家庭服务器，责任与 VPS 类似，外加路由器安全。如果使用带隧道服务（如 Cloudflare Tunnel）的家庭服务器，Cloudflare 会处理面向公众的 HTTPS 和 DDoS 防护；用户仍需保护本地服务器本身（操作系统更新、强密码，如果 <code>cloudflared</code> 与 Web 服务器不在同一局域网设备上，可能还需要本地防火墙）；Fail2ban 对于仅通过隧道暴露的服务可能不那么关键（如果隧道提供商或 Cloudflare Access 策略处理了暴力破解），但对于服务器本身的 SSH 访问仍然有益；本地服务器上的 UFW 应配置为仅允许来自 <code>cloudflared</code> 进程或特定本地 IP 的连接。因此，安全部分的指导需要根据第四节中讨论的不同部署场景进行细化，并非一刀切。</p>
+<h2 id="6-结论：启动并维护您的个人数字空间"><a href="#6-结论：启动并维护您的个人数字空间" class="headerlink" title="6. 结论：启动并维护您的个人数字空间"></a>6. 结论：启动并维护您的个人数字空间</h2><h3 id="6-1-推荐路径总结"><a href="#6-1-推荐路径总结" class="headerlink" title="6.1. 推荐路径总结"></a>6.1. 推荐路径总结</h3><p>本报告详细探讨了构建一个基于 Obsidian 笔记的自托管个人博客系统的完整流程。综合考虑对 Obsidian 特性的原生支持、易用性以及社区活跃度，<strong>Quartz v4</strong> 是一个强有力的 SSG 选择。对于希望从家庭服务器发布内容的用户，<strong>Cloudflare Tunnel</strong> 因其免费套餐、强大的安全特性（无需开放入站端口）以及与自有域名的良好集成，成为推荐的远程访问方案。对于寻求更简单部署和维护的用户，将 Quartz v4 项目托管在 <strong>Netlify 或 Vercel</strong> 等静态托管平台上也是一个优秀的选择，这些平台通常会自动处理构建、部署和 HTTPS。</p>
+<p>无论选择何种路径，都必须强调<strong>分层安全防护</strong>的重要性，包括但不限于：使用 HTTPS (通过 Let’s Encrypt)、配置防火墙 (如 UFW)、部署入侵检测系统 (如 Fail2ban，尤其适用于 VPS 或直接暴露的家庭服务器)、保持所有软件的定期更新，以及建立可靠的数据备份机制。</p>
+<p>最终的“最佳”路径取决于用户的技术舒适度、对控制权的期望以及具体的功能需求。</p>
+<h3 id="6-2-持续维护、内容更新与未来展望"><a href="#6-2-持续维护、内容更新与未来展望" class="headerlink" title="6.2. 持续维护、内容更新与未来展望"></a>6.2. 持续维护、内容更新与未来展望</h3><p>启动博客仅仅是旅程的开始。一个成功的自托管数字空间需要持续的关注和投入：</p>
+<ul>
+<li><strong>持续维护</strong>:<ul>
+<li><strong>软件更新</strong>: 定期更新您选择的 SSG (Quartz v4)、其插件、服务器操作系统 (如果适用)、Web 服务器软件以及所有相关依赖。这是维持安全性和功能性的关键。</li>
+<li><strong>监控</strong>: 定期检查服务器日志（如果自托管）和分析数据，了解访问情况并发现潜在问题。</li>
+<li><strong>安全审计</strong>: 定期回顾安全配置，确保防火墙规则、Fail2ban 设置等依然有效且符合当前需求。</li>
+</ul>
+</li>
+<li><strong>内容更新</strong>:<ul>
+<li><strong>工作流程</strong>: 在 Obsidian 中撰写和编辑您的笔记。</li>
+<li>如果使用如 <code>obsidian-quartz-publish</code> 之类的工具或自定义脚本进行选择性发布，运行相应命令将待发布内容同步到 Quartz 的 <code>content</code> 目录。</li>
+<li>将更改提交 (commit) 并推送 (push) 到您的 Git 仓库。</li>
+<li>根据您的部署方案，SSG 将自动（如在 Netlify&#x2F;Vercel 上）或手动（如在 VPS 上触发构建脚本）重新构建并部署站点。</li>
+</ul>
+</li>
+<li><strong>未来可能的增强功能</strong>:<ul>
+<li><strong>评论系统</strong>: 集成第三方评论系统，如 Cactus Comments 2、Giscus (基于 GitHub Discussions)、Isso (自托管) 等，以增加读者互动。</li>
+<li><strong>网站分析</strong>: 添加网站分析工具，如注重隐私的 Plausible 或 GoatCounter，或者功能更全面的 Google Analytics 16。</li>
+<li><strong>自定义域名</strong>: 更深入地配置自定义域名，包括裸域名重定向、邮件服务等。</li>
+<li><strong>高级主题定制</strong>: 学习所选 SSG 的主题系统，进行更深度的视觉和布局定制，甚至开发自定义组件。</li>
+<li><strong>增强备份策略</strong>: 实施更自动化、更全面的备份方案，例如使用 Duplicati 或 BorgBackup 对整个服务器进行备份 (如果适用)。</li>
+<li><strong>探索其他 Obsidian 插件集成</strong>: 随着 SSG 和相关工具的发展，可能会有更多 Obsidian 插件的功能可以被集成或在发布的工作流中得到支持。</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-最终的鼓励"><a href="#6-3-最终的鼓励" class="headerlink" title="6.3. 最终的鼓励"></a>6.3. 最终的鼓励</h3><p>构建并维护一个完全属于自己的、由 Obsidian 驱动的数字空间，不仅能让您完全掌控自己的数据和表达，更是一次宝贵的学习和实践过程。这个过程或许充满挑战，但最终收获的将是一个真正个性化、安全且能够与世界分享您见解的独特平台。希望本报告能为您在这段旅程中提供坚实的技术支撑和清晰的指引。</p>
+
       
     </div>
 
@@ -925,13 +2627,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
