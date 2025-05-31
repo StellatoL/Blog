@@ -30,9 +30,9 @@
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-01T10:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-31T03:32:11.889Z">
+<meta property="article:modified_time" content="2025-05-31T04:43:10.887Z">
 <meta property="article:author" content="St_w">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="test">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2025/01/01/hello-world/">
@@ -198,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-31 11:32:11" itemprop="dateModified" datetime="2025-05-31T11:32:11+08:00">2025-05-31</time>
+                <time title="修改时间：2025-05-31 12:43:10" itemprop="dateModified" datetime="2025-05-31T12:43:10+08:00">2025-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -250,7 +250,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/blog/" rel="tag"># blog</a>
+              <a href="/tags/test/" rel="tag"># test</a>
           </div>
 
         
@@ -564,22 +564,13 @@ var options = {
   backgroundColor: 'transparent',
   buttonColorDark: '#100f2c',
   buttonColorLight: '#fff',
-  saveInCookies: false,
+  saveInCookies: true,
   label: '🌓',
-  autoMatchOsTheme: false
+  autoMatchOsTheme: true
 }
 const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
-if (window.darkmode && !window.darkmode.isActivated()) {
-  window.darkmode.toggle();
-  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
-  if (toggleButtons && toggleButtons.length > 0) {
-    for (i = 0; i < toggleButtons.length; i++) {
-      toggleButtons[i].classList.add("darkmode-toggle--white");
-    }
-  }
-}
 </script>
 
     </div>

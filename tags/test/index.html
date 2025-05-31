@@ -25,14 +25,14 @@
   <meta name="description" content="老大，欢迎回来喵~">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stellato的星空">
-<meta property="og:url" content="http://example.com/tags/blog/index.html">
+<meta property="og:url" content="http://example.com/tags/test/index.html">
 <meta property="og:site_name" content="Stellato的星空">
 <meta property="og:description" content="老大，欢迎回来喵~">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="St_w">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/tags/blog/">
+<link rel="canonical" href="http://example.com/tags/test/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>标签: blog | Stellato的星空</title>
+  <title>标签: test | Stellato的星空</title>
   
 
 
@@ -167,7 +167,7 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <h2 class="collection-header">blog
+        <h2 class="collection-header">test
           <small>标签</small>
         </h2>
       </div>
@@ -497,22 +497,13 @@ var options = {
   backgroundColor: 'transparent',
   buttonColorDark: '#100f2c',
   buttonColorLight: '#fff',
-  saveInCookies: false,
+  saveInCookies: true,
   label: '🌓',
-  autoMatchOsTheme: false
+  autoMatchOsTheme: true
 }
 const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
-if (window.darkmode && !window.darkmode.isActivated()) {
-  window.darkmode.toggle();
-  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
-  if (toggleButtons && toggleButtons.length > 0) {
-    for (i = 0; i < toggleButtons.length; i++) {
-      toggleButtons[i].classList.add("darkmode-toggle--white");
-    }
-  }
-}
 </script>
 
     </div>
