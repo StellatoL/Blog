@@ -164,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/GPIO/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -178,7 +178,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/01/01/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">基本设置</a>
+            <a href="/2025/01/01/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/GPIO/" class="post-title-link" itemprop="url">GPIO</a>
         </h2>
 
         <div class="post-meta">
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-31 13:20:34" itemprop="dateModified" datetime="2025-05-31T13:20:34+08:00">2025-05-31</time>
+                <time title="修改时间：2025-05-31 13:19:32" itemprop="dateModified" datetime="2025-05-31T13:19:32+08:00">2025-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,14 +230,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-开启时钟以及初始化GPIO口"><a href="#1-开启时钟以及初始化GPIO口" class="headerlink" title="1.开启时钟以及初始化GPIO口"></a>1.开启时钟以及初始化GPIO口</h1><hr>
-<h2 id="开启时钟"><a href="#开启时钟" class="headerlink" title="开启时钟"></a>开启时钟</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOX,ENABLE);</span><br></pre></td></tr></table></figure>
-<p><strong>具体代码解释：</strong><br>	因为GPIO挂载在APB2总线上，所以此函数是用于开启GPIO_x上的时钟信号</p>
-<p><strong>参数：</strong><br>	1.<em>RCC_APB2Periph_GPIOx</em><br>		其中，x代表数字，这个参数用于控制开启时钟的GPIO端口号<br>	2.<em>ENABLE</em><br>		这个参数表示开启或关闭时钟，对应<em>ENABLE</em>和<em>DISABLE</em></p>
-<hr>
-<h2 id="初始化GPIO口"><a href="#初始化GPIO口" class="headerlink" title="初始化GPIO口"></a>初始化GPIO口</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line"></span><br><span class="line">GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;</span><br><span class="line">GPIO_InitStructure.GPIO_Pin = GPIO_Pin_x;</span><br><span class="line">GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line"></span><br><span class="line">GPIO_Init(GPIOX,&amp;GPIO_InitStructure);</span><br></pre></td></tr></table></figure>
-<p><strong>具体代码解释：</strong></p>
-
+          
       
     </div>
 
