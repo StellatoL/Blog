@@ -164,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/RM__PRIME/RM%E7%AE%97%E6%B3%95/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/C/%E6%B3%9B%E5%9E%8B%E6%8C%87%E9%92%88%E4%B8%8E%E9%80%9A%E7%94%A8%E6%80%A7/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/01/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -178,7 +178,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/01/01/RM__PRIME/RM%E7%AE%97%E6%B3%95/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/C/%E6%B3%9B%E5%9E%8B%E6%8C%87%E9%92%88%E4%B8%8E%E9%80%9A%E7%94%A8%E6%80%A7/" class="post-title-link" itemprop="url">泛型指针与通用性</a>
+            <a href="/2025/01/01/RM__PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">基本设置</a>
         </h2>
 
         <div class="post-meta">
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-31 13:24:37" itemprop="dateModified" datetime="2025-05-31T13:24:37+08:00">2025-05-31</time>
+                <time title="修改时间：2025-05-31 13:20:34" itemprop="dateModified" datetime="2025-05-31T13:20:34+08:00">2025-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -207,15 +207,15 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/RM-PRIME/RM%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">RM算法</span></a>
+                  <a href="/categories/RM-PRIME/RM%E7%94%B5%E6%8E%A7/" itemprop="url" rel="index"><span itemprop="name">RM电控</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/RM-PRIME/RM%E7%AE%97%E6%B3%95/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">学习记录</span></a>
+                  <a href="/categories/RM-PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">学习记录</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/RM-PRIME/RM%E7%AE%97%E6%B3%95/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+                  <a href="/categories/RM-PRIME/RM%E7%94%B5%E6%8E%A7/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/STM32/" itemprop="url" rel="index"><span itemprop="name">STM32</span></a>
                 </span>
             </span>
 
@@ -230,23 +230,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-泛型指针的定义"><a href="#1-泛型指针的定义" class="headerlink" title="1.泛型指针的定义"></a>1.泛型指针的定义</h1><h2 id="类型声明："><a href="#类型声明：" class="headerlink" title="类型声明："></a>类型声明：</h2><h3 id="void-是一个无类型指针，可以指向任意类型的数据的地址"><a href="#void-是一个无类型指针，可以指向任意类型的数据的地址" class="headerlink" title="void * 是一个无类型指针，可以指向任意类型的数据的地址"></a>void * 是一个<em>无类型指针</em>，可以指向任意类型的数据的地址</h3><h3 id="eg"><a href="#eg" class="headerlink" title="eg."></a>eg.</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">char</span> c = <span class="string">&#x27;x&#x27;</span>;</span><br><span class="line"><span class="type">void</span> *p = &amp;a;  <span class="comment">// 正确：指向 int</span></span><br><span class="line">p = &amp;c;        <span class="comment">// 正确：指向 char</span></span><br></pre></td></tr></table></figure>
-
+          <h1 id="1-开启时钟以及初始化GPIO口"><a href="#1-开启时钟以及初始化GPIO口" class="headerlink" title="1.开启时钟以及初始化GPIO口"></a>1.开启时钟以及初始化GPIO口</h1><hr>
+<h2 id="开启时钟"><a href="#开启时钟" class="headerlink" title="开启时钟"></a>开启时钟</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOX,ENABLE);</span><br></pre></td></tr></table></figure>
+<p><strong>具体代码解释：</strong><br>	因为GPIO挂载在APB2总线上，所以此函数是用于开启GPIO_x上的时钟信号</p>
+<p><strong>参数：</strong><br>	1.<em>RCC_APB2Periph_GPIOx</em><br>		其中，x代表数字，这个参数用于控制开启时钟的GPIO端口号<br>	2.<em>ENABLE</em><br>		这个参数表示开启或关闭时钟，对应<em>ENABLE</em>和<em>DISABLE</em></p>
 <hr>
-<h1 id="2-核心特点"><a href="#2-核心特点" class="headerlink" title="2.核心特点"></a>2.核心特点</h1><h2 id="1-通用型"><a href="#1-通用型" class="headerlink" title="(1)通用型"></a>(1)通用型</h2><h3 id="可以接受任何数据类型的地址"><a href="#可以接受任何数据类型的地址" class="headerlink" title="可以接受任何数据类型的地址"></a>可以接受任何数据类型的地址</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> *p;</span><br><span class="line"><span class="type">int</span> num = <span class="number">5</span>;</span><br><span class="line">p = &amp;num;     <span class="comment">// 指向 int</span></span><br><span class="line">p = <span class="string">&quot;hello&quot;</span>;   <span class="comment">// 指向字符串</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="2-不能直接解引用"><a href="#2-不能直接解引用" class="headerlink" title="(2)不能直接解引用"></a>(2)不能直接解引用</h2><h3 id="void-指针没有类型信息，直接引用可能会导致编译错误"><a href="#void-指针没有类型信息，直接引用可能会导致编译错误" class="headerlink" title="void* 指针没有类型信息，直接引用可能会导致编译错误"></a>void* 指针没有类型信息，直接引用可能会导致编译错误</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="type">void</span> *p = &amp;x;</span><br><span class="line"><span class="comment">// *p = 20;    // 错误：无法解引用 void*</span></span><br><span class="line"><span class="type">int</span> *q = (<span class="type">int</span>*)p; <span class="comment">// 必须转为具体类型的指针</span></span><br><span class="line">*q = <span class="number">20</span>;          <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="3-指针运算限制"><a href="#3-指针运算限制" class="headerlink" title="(3)指针运算限制"></a>(3)指针运算限制</h2><h3 id="void-指针不能直接进行算术运算（如-p-），因为编译器不知道步长："><a href="#void-指针不能直接进行算术运算（如-p-），因为编译器不知道步长：" class="headerlink" title="void* 指针不能直接进行算术运算（如 p++），因为编译器不知道步长："></a>void* 指针不能直接进行算术运算（如 <code>p++</code>），因为编译器不知道步长：</h3>  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">void</span> *p = arr;</span><br><span class="line"><span class="comment">// p++;        // 错误：未知步长</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3. 使用场景"></a>3. 使用场景</h1><h2 id="1-通用函数设计"><a href="#1-通用函数设计" class="headerlink" title="(1) 通用函数设计"></a>(1) 通用函数设计</h2><h3 id="示例：实现一个遍历数组的通用函数（如问题中的-ForEach）："><a href="#示例：实现一个遍历数组的通用函数（如问题中的-ForEach）：" class="headerlink" title="示例：实现一个遍历数组的通用函数（如问题中的 ForEach）："></a><strong>示例</strong>：实现一个遍历数组的通用函数（如问题中的 <code>ForEach</code>）：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">ForEach</span><span class="params">(<span class="type">void</span> *arr, <span class="type">int</span> elem_size, <span class="type">int</span> num, <span class="type">void</span> (*func)(<span class="type">void</span>*))</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 通过 char* 指针按字节步进（因为 char 大小为 1 字节）</span></span><br><span class="line">        func((<span class="type">char</span>*)arr + i * elem_size);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="2-内存操作函数"><a href="#2-内存操作函数" class="headerlink" title="(2) 内存操作函数"></a>(2) 内存操作函数</h2><h3 id="C-标准库中的-memcpy-和-memset-使用-void-实现通用内存操作："><a href="#C-标准库中的-memcpy-和-memset-使用-void-实现通用内存操作：" class="headerlink" title="C 标准库中的 memcpy 和 memset 使用 void* 实现通用内存操作："></a>C 标准库中的 <code>memcpy</code> 和 <code>memset</code> 使用 <code>void*</code> 实现通用内存操作：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span>* <span class="title function_">memcpy</span><span class="params">(<span class="type">void</span> *dest, <span class="type">const</span> <span class="type">void</span> *src, <span class="type">size_t</span> n)</span>;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="3-动态数据结构"><a href="#3-动态数据结构" class="headerlink" title="(3) 动态数据结构"></a>(3) 动态数据结构</h2><h3 id="在链表、树等数据结构中，void-可存储任意类型的数据："><a href="#在链表、树等数据结构中，void-可存储任意类型的数据：" class="headerlink" title="在链表、树等数据结构中，void* 可存储任意类型的数据："></a>在链表、树等数据结构中，<code>void*</code> 可存储任意类型的数据：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="type">void</span> *data;     <span class="comment">// 泛型数据</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<hr>
+<h2 id="初始化GPIO口"><a href="#初始化GPIO口" class="headerlink" title="初始化GPIO口"></a>初始化GPIO口</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line"></span><br><span class="line">GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;</span><br><span class="line">GPIO_InitStructure.GPIO_Pin = GPIO_Pin_x;</span><br><span class="line">GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;</span><br><span class="line"></span><br><span class="line">GPIO_Init(GPIOX,&amp;GPIO_InitStructure);</span><br></pre></td></tr></table></figure>
+<p><strong>具体代码解释：</strong></p>
 
       
     </div>
